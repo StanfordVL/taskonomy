@@ -35,7 +35,7 @@ Table of contents
 
 
 These models are based on task specific networks of the [Taskonomy](http://taskonomy.vision/) project.
-For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository focuses on provding an easy to use unified bank for the pretrained vision tasks. There are 21 tasks accepting one image as input (e.g. image to surface normals) and 4 tasks accepting multiple (e.g. relative camera pose estimation). Detailed definitions of each task is provided [here](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf).
+For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository focuses on provding an easy to use unified bank for the pretrained vision tasks. There are 21 tasks accepting one image as input (e.g. surface normal estimation) and 4 tasks accepting multiple image (e.g. relative camera pose estimation). Detailed definitions of each task is provided [here](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf).
 
 The single-image tasks:
 
@@ -61,11 +61,11 @@ Triplet-Fixated-Camera-Pose     Point-Matching
 
 ### Network Architecture
 
-As shown in the top figure, each task shares the same encoder architexture. The encoder maps the input image (256x256) into a representation of size 2048 (16x16x8). Hence the encoder architecture and representation size of all tasks are identical. The encoder is modified based on [ResNet-50](https://arxiv.org/pdf/1512.03385.pdf) by: 1. replacing `conv5_1`'s stride 2 convolution with stride 1 convolution. 2. No global average pooling. 
+As shown in the top figure, each task shares the same encoder architecture. The encoder maps the input image (256x256) into a representation of size 2048 (16x16x8). Hence the encoder architecture and representation size of all tasks are identical. The encoder is modified based on [ResNet-50](https://arxiv.org/pdf/1512.03385.pdf) by: 1. replacing `conv5_1`'s stride 2 convolution with stride 1 convolution. 2. No global average pooling. 
 
 Also, we trained all of the networks on **the same exact set of input images**, i.e. the pixels seen in the input by all networks are identical and the only difference is in the output space. 
 
-Since the tasks in our dictionary can have different dimensionalities in their output, we have a varying decoder architecture accordingly. We tried to keep the decoder structure compact and varying as little as possible. Also, slighlty different kind of loss could be employed for different tasks accordingly. See below table for the complete information.
+Since the tasks in our dictionary can have different dimensionalities in their output, we have a varying decoder architecture accordingly. We tried to keep the decoder structure compact and varying as little as possible. Also, slighlty different kind of loss could be employed for different tasks accordingly. See the table below for the complete information.
 
 <div align="center">
   <img src="assets/web_assets/decoder_loss.png"  />
@@ -87,14 +87,14 @@ cd taskonomy/taskbank
 
 ### Step 2: Install Requirements
 
-**Python**: see [`requirement.txt`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/requirement.txt) for a list of used packages. We recommend doing a clean installation of requirements using virtualenv:
+**Python**: see [`requirement.txt`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/requirement.txt) for complete list of used packages. We recommend doing a clean installation of requirements using virtualenv:
 ```bash
 conda create -n testenv python=3.4
 source activate testenv
 pip install -r requirement.txt 
 ```
 
-You could also directly install the requirements through the following command if you dont want to do the above clean installation via virtualenv:
+If you dont want to do the above clean installation via virtualenv, you could also directly install the requirements through:
 ```bash
 pip install -r requirement.txt --no-index
 ```
@@ -106,7 +106,7 @@ pip install -r requirement.txt --no-index
 
 While in `taskonomy/taskbank` folder:
 
-#### Step 1: Download Pretrained Models
+#### Step 1: Download Pretrained Networks
 
 ```
 sh tools/download_model.sh
@@ -181,7 +181,7 @@ will store predicted scene classes at `assets/test_scene_class.npy`.
 
 Running tasks with multiple images in their input is pretty similar to the same process for single image tasks.
 
-#### Step 1: Download Pretrained Models
+#### Step 1: Download Pretrained Networks
 
 ```
 sh tools/download_model_multi.sh
@@ -226,7 +226,7 @@ python tools/run_multi_img_task.py --task point_match --img assets/test_1.png,as
 ```
 
 ## Evaluation: How good are these networks?
-For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.vision/). To give a quick overall idea, the table below shows the proportion (%) of a hold-out test set on which the networks in the task bank
+For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.vision/). Overall, the shared networks are often on par or better than per-task customized state-of-the-art. For instnace, we compared our depth estimator network vs. the released models of [Laina2016](https://github.com/iro-cp/FCRN-DepthPrediction) (as of now state-of-the-art on NYU dataset) resulting in 88% `win-rate` for task bank's network (after all proper normalizations and whitenings to count for dataset distribution changes; supported by qualitative results). To give an overall idea about the bank, the table below shows the proportion (%) of a hold-out test set on which the networks in the task bank
 were able to beat average estimator (`avg`), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks, statistically. Qualititave results run frame-by-frame on a YouTube video can be examined [here](https://taskonomy.vision/#models).  
 
 <div align="center">
