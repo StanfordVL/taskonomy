@@ -1,6 +1,6 @@
 # TASK BANK: A Unified Bank of 25 Pretrained Vision Tasks
 
-This repository provides a unified bank of pre-trained networks for 25 vision tasks spanning a wide range of 2D, 3D, and semantic problems. We provide pretrained models, code for running the models on arbitrary images, as well as code for visualizing results similar to the ones shown below and [here](https://taskonomy.vision/tasks). The figure below shows the task outputs given a query image (top left).
+This repository provides a unified bank of pre-trained networks for **25 vision tasks spanning a wide range of 2D, 3D, and semantic problems**. We provide pretrained models, code for running the models on arbitrary images, as well as code for visualizing results similar to the ones shown below and [here](https://taskonomy.vision/tasks). The figure below shows the outputs for a query image (top left).
 
 <div align="center">
   <img src="assets/task_dict_v.jpg" />
