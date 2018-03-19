@@ -76,7 +76,7 @@ def classification(predicted, synset, to_store_name):
     to_print_pred = "Top 5 prediction: \n {}\n {}\n {}\n {} \n {}".format(*top_5_pred)
     img = Image.new('RGBA', (400, 200), (255, 255, 255))
     d = ImageDraw.Draw(img)
-    fnt = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed.ttf', 25)
+    fnt = ImageFont.truetype('lib/data/DejaVuSerifCondensed.ttf', 25)
     d.text((20, 5), to_print_pred, fill=(255, 0, 0), font=fnt)
     img.save(to_store_name, 'PNG')
 
@@ -138,7 +138,7 @@ def single_img_colorize( predicted, input_batch, to_store_name ):
     softmax = np.exp(predicted - np.expand_dims(maxs, axis=-1))
     sums = np.sum(softmax, axis=-1)
     softmax = softmax / np.expand_dims(sums, -1)
-    kernel = np.load('/home/ubuntu/task-taxonomy-331b/lib/data/pts_in_hull.npy')
+    kernel = np.load('lib/data/pts_in_hull.npy')
     gen_target_no_temp = np.dot(softmax, kernel)
 
     images_resized = np.zeros([0, 256, 256, 2], dtype=np.float32)
@@ -269,7 +269,7 @@ def get_synset(task):
         0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.,  1.,  0.,  0.,  0.,  0.,
         0.,  1.,  0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.,  1.,  0.])
 
-    with open('/home/ubuntu/task-taxonomy-331b/lib/data/places_class_names.txt', 'r') as fp:
+    with open('lib/data/places_class_names.txt', 'r') as fp:
         synset_places = [x.rstrip()[4:-1] for x,y in zip(fp.readlines(), select) if y == 1.]
     if task == 'class_places':
         synset = synset_places
