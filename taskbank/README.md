@@ -37,7 +37,7 @@ Table of contents
 These models are based on task specific networks of the [Taskonomy](http://taskonomy.vision/) project.
 For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository focuses on provding an easy to use unified bank for the pretrained vision tasks. There are 21 tasks accepting one image as input (e.g. image to surface normals) and 4 tasks accepting multiple (e.g. relative camera pose estimation). Detailed definitions of each task is provided [here](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf).
 
-Single input tasks:
+The single-image tasks:
 
 
 ```
@@ -49,7 +49,7 @@ Segmentation-2D         Segmentation-3D     Segmentation-Semantic    Surface-Nor
 Vanishing-Point
 ```
 
-The 4 multi-image tasks:
+The multi-image tasks:
 
 ```
 Pairwise-Nonfixated-Camera-Pose Pairwise-Fixated-Camera-Pose
@@ -71,18 +71,11 @@ Since the tasks in our dictionary can have different dimensionalities in their o
   <img src="assets/web_assets/decoder_loss.png"  />
 </div>
 
-### Evaluation: How good are these networks?
-For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.vision/). To give a quick overall idea, the table below shows the proportion (%) of a hold-out test set for which the networks in the task bank
-were able to beat average estimator (`avg`), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks statistically. Qualititave results run frame-by-frame on a YouTube video can be examined [here](https://taskonomy.vision/#models).  
-
-<div align="center">
-  <img src="assets/web_assets/losses.png" width="500px"  />
-</div>
 
 
 ## Installation
 
-### Clone the Code from Github
+### Step 1: Clone the Code from Github
 
 ```
 git clone https://github.com/StanfordVL/taskonomy.git
@@ -94,28 +87,26 @@ cd taskonomy/taskbank
 
 See [`requirement.txt`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/requirement.txt) for a list of used packages. 
 
-We recommend doing a clean installment using virtualenv:
+Step 2: We recommend doing a clean installation of requirements using virtualenv:
 ```bash
 conda create -n testenv python=3.4
 source activate testenv
 pip install -r requirement.txt 
 ```
 
-You can also install the requirements through:
+You could also directly install the requirements through the following if you dont want to do the above clean installation via virtualenv:
 ```bash
 pip install -r requirement.txt --no-index
 ```
 
-### Tensorflow
-
-You need [Tensorflow](https://www.tensorflow.org/install/). We used Version 1.2.1.
+**Tensorflow**: Note that you need [Tensorflow](https://www.tensorflow.org/install/). We used Version 1.2.1.
 
 
 ## Running Single-Image Tasks
 
 While in `taskonomy/taskbank` folder:
 
-#### Step 1: Downloading Pretrained Model
+#### Step 1: Download Pretrained Models
 
 ```
 sh tools/download_model.sh
@@ -123,20 +114,15 @@ sh tools/download_model.sh
 
 #### Step 2: Run Demo Script
 
-To run a pretrained model on a specific image, do:
+To run the pretrained model of a task on a specific image, do:
 ```bash
 python tools/run_img_task.py --task $TASK --img $PATH_TO_INPUT --store $WHERE_TO_STORE
 ```
 
-For the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/tools/task_dict.txt), for example, according to the dictionary:
+For the `--task` flag which specifies the task being run on the query image, find the task name in [Task Name Dictionary](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/tools/task_dict.txt). For example, according to the dictionary:
 ```
 Surface-Normal : rgb2sfnorm
 ```
-
-<div align="center">
-  <img src="assets/test.png" width="388px" />
-  <p>Example Test Image</p>
-</div>
 
 Then, we can run the script on our [example image](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test.png) as such:
 
@@ -144,45 +130,52 @@ Then, we can run the script on our [example image](https://github.com/StanfordVL
 python tools/run_img_task.py --task rgb2sfnorm --img assets/test.png --store assets/test_sf.png
 ```
 
-Which will give us image [`test_sf.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_sf.png):
 <div align="center">
-  <img src="assets/web_assets/test_sf.png" width="388px" />
-  <p>Test Image Surface Normal Estimation</p>
+  <img src="assets/test.png" width="388px" />
+  <p>Example Test Image</p>
 </div>
 
-Similarly, low-dimensional task uses the same script. For example:
+Which will give us image [`test_sf.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/test_sf.png):
+<div align="center">
+  <img src="assets/web_assets/test_sf.png" width="388px" />
+  <p>Surface Normal Estimation on the Test Image</p>
+</div>
+
+Similarly, non pixel-to-pixel tasks which produce lower dimensional (e.g. vanishing points) or classification (e.g. scene classification) outputs uses the same script. For example:
 ```
 Scene-Classification : class_places
 ```
 Again, we can run the script on our example image using:
 
 ```bash
-python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_places.png
+python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_scene_class.png
 ```
 
-Which will give us image [`test_places.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_places.png):
+Which will give us image [`test_scene_class.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_places.png):
 <div align="center">
-  <img src="assets/web_assets/test_places.png" width="388px" />
-  <p>Test Image Scene Classification</p>
+  <img src="assets/web_assets/test_scene_class.png" width="388px" />
+  <p>Scene Classification on Test Image </p>
 </div>
 
 ### Storing Representations
-Use the flag `--store-rep` to store the representation of the image prduced by task's encoder. Add `--store-rep` flag to the command and the representation will be stored at `${WHERE_TO_STORE}.npy`. For example, running:
+The flag `--store-rep` enables saving the representation of the image prduced by task's encoder. Add `--store-rep` to the command and the representation will be stored at `${WHERE_TO_STORE}.npy`. For example, running:
 ```bash
-python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_places.png --store-rep
+python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_scene_class.png --store-rep
 ```
-will store the representation of the image's representation under Scene Classification encoder at `assets/test_places.npy`.
+will store the representation of `test.png` by the scene classification task encoder at `assets/test_scene_class.npy`.
 
 ### Storing Predictions
-To save the output of the numerical prediction of the network, e.g. the coordiantes of the predicted vanishing points, besides the visualization of it saved as `.png`, use the flag `--store-pred`. Add `--store-pred` flag to the command and the prediction will be stored at `${WHERE_TO_STORE}_pred.npy`. For example, running:
+To save the numerical prediction of the network, e.g. coordiantes of the predicted vanishing points besides its png visualization, use the flag `--store-pred`. Add `--store-pred` to the command and the prediction will be stored at `${WHERE_TO_STORE}_pred.npy`. For example, running:
 ```bash
-python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_places.png --store-pred
+python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_scene_class.png --store-pred
 ```
-Will store the prediction of the image's Scene Classification result at `assets/test_places_pred.npy`.
+will store predicted scene classes at `assets/test_scene_class.npy`.
 
 ## Running Multi-Image Tasks
 
-#### Step 1: Downloading Pretrained Model
+Running tasks with multiple images in their input is pretty similar to the same process for single image tasks.
+
+#### Step 1: Download Pretrained Models
 
 ```
 sh tools/download_model_multi.sh
@@ -194,13 +187,13 @@ To run a pretrained multi-image model on specific images (in case of Triplet-Fix
 ```bash
 python tools/run_quad_img_task.py --task $TASK --img $IMG1,$IMG2 --store $WHERE_TO_STORE
 ```
-Similarly for the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/tools/task_dict.txt), for example, according to the dictionary:
+Similarly for the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/tools/task_dict.txt). For example, according to the dictionary:
 ```
 Pairwise-Nonfixated-Camera-Pose : non_fixated_pose
 ```
 <div align="center">
   <img src="assets/web_assets/sbs.png" width="650px" />
-  <p>Camera Pose Input (left: test_1.png, right:test.png)</p>
+  <p>Camera Pose Estimation - Input Images (left: test_1.png, right:test.png)</p>
 </div>
 
 Then, we can run the script on our [example image 1](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test.png) and [example image 2](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_1.png) as such:
@@ -210,19 +203,28 @@ python tools/run_quad_img_task.py --task non_fixated_pose --img assets/test_1.pn
 ```
 Note: camera pose is calculate with reference to the second image (here that is `test.png`).
 
-The script will give us image [`assets/web_assets/test_pose.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/test_places.png):
+The script will give us [`assets/web_assets/test_pose.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/test_scene_class.png):
 <div align="center">
   <img src="assets/web_assets/test_pose.png" width="388px" />
-  <p>Camera Pose Estimation (green represents `test.png`'s camera. Red represents `test_1.png`'s.)</p>
+  <p>Camera Pose Estimation (green represents `test.png` 's camera. Red represents `test_1.png` 's.)</p>
 </div>
 
-The `--store-rep` and `--store-pred` flags work the same as in singe image task code `run_img_task.py` .
+The `--store-rep` and `--store-pred` flags work the same way as in singe-image tasks (described above).
 
-**Point-Matching**: note that the task point matching returns if the center pixels of input images correspond to the same physical point or not (i.e. if they make a "point correspondence") as either 0 (non-matching) or 1 (matching). No visualization generated for this task and `--store` is used with flags `--store-rep` and `--store-pred`. See an example below:  
+**Point-Matching**: note that the task point matching returns if the center pixels of input images correspond to the same physical point or not (i.e. if they make a "point correspondence") as either 0 (non-matching) or 1 (matching). No visualization is generated for this task and `--store` is used with flags `--store-rep` and `--store-pred` to determine where to save the representation and predicction. See an example below:  
 
 ```bash
 python tools/run_quad_img_task.py --task point_match --img assets/test_1.png,assets/test.png --store assets/res/point_match_results --store-rep --store-pred
 ```
+
+## Evaluation: How good are these networks?
+For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.vision/). To give a quick overall idea, the table below shows the proportion (%) of a hold-out test set for which the networks in the task bank
+were able to beat average estimator (`avg`), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks statistically. Qualititave results run frame-by-frame on a YouTube video can be examined [here](https://taskonomy.vision/#models).  
+
+<div align="center">
+  <img src="assets/web_assets/losses.png" width="500px"  />
+</div>
+
 
 ## Training Data Statistics
 
