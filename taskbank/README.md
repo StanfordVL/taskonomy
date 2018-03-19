@@ -111,7 +111,7 @@ You need [Tensorflow](https://www.tensorflow.org/install/). We use Version 1.2.1
 
 ## Running Single Image Tasks
 
-
+While in `taskonomy/taskbank` folder:
 
 #### Step 1: Downloading Pretrained Model
 
