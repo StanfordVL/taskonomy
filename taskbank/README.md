@@ -34,8 +34,10 @@ Table of contents
 ## Introduction
 
 
-These models are based on specific networks of the [Taskonomy](http://taskonomy.vision/) project.
-For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository solely focuses on provding an easy to use unified bank for the pretrained vision tasks. 21 single image input tasks and 4 quadratic (2 input image) tasks are included. Single input tasks:
+These models are based on task specific networks of the [Taskonomy](http://taskonomy.vision/) project.
+For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository focuses on provding an easy to use unified bank for the pretrained vision tasks. There are 21 tasks accepting one image as input (e.g. image to surface normals) and 4 tasks accepting multiple (e.g. relative camera pose estimation). Detailed definitions of each task is provided [here](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf).
+
+Single input tasks:
 
 
 ```
@@ -47,14 +49,14 @@ Segmentation-2D         Segmentation-3D     Segmentation-Semantic    Surface-Nor
 Vanishing-Point
 ```
 
-The 4 quadratic tasks:
+The 4 multi-image tasks:
 
 ```
 Pairwise-Nonfixated-Camera-Pose Pairwise-Fixated-Camera-Pose
 Triplet-Fixated-Camera-Pose     Point-Matching
 ``` 
 <div align="center">
-  <img src="assets/figure.png" />
+  <img src="assets/web_assets/figure.png" />
 </div>
 
 ### Network Architecture
@@ -66,7 +68,7 @@ Also, we trained all of the networks on **the same exact set of input images**, 
 Since the tasks in our dictionary can have different dimensionalities in their output, we have a varying decoder architecture accordingly. We tried to keep the decoder structure compact and varying as little as possible. Also, slighlty different kind of loss could be employed for different tasks accordingly. See below table for the complete information.
 
 <div align="center">
-  <img src="assets/decoder_loss.png"  />
+  <img src="assets/web_assets/decoder_loss.png"  />
 </div>
 
 ### Evaluation: How good are these networks?
@@ -74,7 +76,7 @@ For a complete discussion on the evaluation of the networks, please see the [pap
 were able to beat average estimator (`avg`), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks statistically. Qualititave results run frame-by-frame on a YouTube video can be examined [here](https://taskonomy.vision/#models).  
 
 <div align="center">
-  <img src="assets/losses.png" width="500px"  />
+  <img src="assets/web_assets/losses.png" width="500px"  />
 </div>
 
 
@@ -109,7 +111,7 @@ pip install -r requirement.txt --no-index
 You need [Tensorflow](https://www.tensorflow.org/install/). We use Version 1.2.1.
 
 
-## Running Single Image Tasks
+## Running Single-Image Tasks
 
 While in `taskonomy/taskbank` folder:
 
@@ -144,7 +146,7 @@ python tools/run_img_task.py --task rgb2sfnorm --img assets/test.png --store ass
 
 Which will give us image [`test_sf.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_sf.png):
 <div align="center">
-  <img src="assets/test_sf.png" width="388px" />
+  <img src="assets/web_assets/test_sf.png" width="388px" />
   <p>Test Image Surface Normal Estimation</p>
 </div>
 
@@ -160,7 +162,7 @@ python tools/run_img_task.py --task class_places --img assets/test.png --store a
 
 Which will give us image [`test_places.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_places.png):
 <div align="center">
-  <img src="assets/test_places.png" width="388px" />
+  <img src="assets/web_assets/test_places.png" width="388px" />
   <p>Test Image Scene Classification</p>
 </div>
 
@@ -178,17 +180,17 @@ python tools/run_img_task.py --task class_places --img assets/test.png --store a
 ```
 Will store the prediction of the image's Scene Classification result at `assets/test_places_pred.npy`.
 
-## Running Multi Image Tasks
+## Running Multi-Image Tasks
 
 #### Step 1: Downloading Pretrained Model
 
 ```
-sh tools/download_model_quadratic.sh
+sh tools/download_model_multi.sh
 ```
 
 #### Step 2: Run Demo Script
 
-To run a pretrained quadratic model on specific images (in case of Triplet-Fixated-Camera-Pose, `--img` should be `$IMG1,$IMG2,$IMG3`), do:
+To run a pretrained multi-image model on specific images (in case of Triplet-Fixated-Camera-Pose, `--img` should be `$IMG1,$IMG2,$IMG3` since the task requires 3 images in input. See [task definitions](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf)), do:
 ```bash
 python tools/run_quad_img_task.py --task $TASK --img $IMG1,$IMG2 --store $WHERE_TO_STORE
 ```
@@ -197,7 +199,7 @@ Similarly for the `--task` flag, find the task name in [Task Name Dictionary](ht
 Pairwise-Nonfixated-Camera-Pose : non_fixated_pose
 ```
 <div align="center">
-  <img src="assets/sbs.png" width="650px" />
+  <img src="assets/web_assets/sbs.png" width="650px" />
   <p>Camera Pose Input (left: test_1.png, right:test.png)</p>
 </div>
 
@@ -208,14 +210,19 @@ python tools/run_quad_img_task.py --task non_fixated_pose --img assets/test_1.pn
 ```
 Note: camera pose is calculate with reference to the second image (here that is `test.png`).
 
-The script will give us image [`assets/test_pose.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_places.png):
+The script will give us image [`assets/web_assets/test_pose.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/test_places.png):
 <div align="center">
-  <img src="assets/test_pose.png" width="388px" />
+  <img src="assets/web_assets/test_pose.png" width="388px" />
   <p>Camera Pose Estimation (green represents `test.png`'s camera. Red represents `test_1.png`'s.)</p>
 </div>
 
 The `--store-rep` and `--store-pred` flags work the same as in singe image task code `run_img_task.py` .
 
+**Point-Matching**: note that the task point matching returns if the center pixels of input images correspond to the same physical point or not (i.e. if they make a "point correspondence") as either 0 (non-matching) or 1 (matching). No visualization generated for this task and `--store` is used with flags `--store-rep` and `--store-pred`. See an example below:  
+
+```bash
+python tools/run_quad_img_task.py --task point_match --img assets/test_1.png,assets/test.png --store assets/res/point_match_results --store-rep --store-pred
+```
 
 ## Training Data Statistics
 
@@ -223,12 +230,12 @@ The dataset consists of **3.99 million images** from **2265 different buildings*
 
 | Property | Mean | Distribution |
 |----|---|----|
-| **Camera Pitch** | -0.77° | ![Distribution of camera pitches](assets/elevations.png) | 
-| **Camera Roll** | 0.0° | ![Distribution of camera roll](assets/rolls.png)  | 
+| **Camera Pitch** | -0.77° | ![Distribution of camera pitches](assets/web_assets/elevations.png) | 
+| **Camera Roll** | 0.0° | ![Distribution of camera roll](assets/web_assets/rolls.png)  | 
 | **Camera Field of view** | 75° | *Constant*  |
-| **Distance**  (from camera to scene content)| 5.5m | ![Distribution of distances from camera to point](assets/distances_to_point.png)  |
-| **3D Obliqueness of Scene Content** (wrt camera)| 52.5° | ![Distribution of point obliquenesses](assets/obliquess.png)  |
-| **Points in view** (for point correspondences) | (median) 15 | ![Distribution of points in camera view](assets/number_of_points_in_camera_view.png)  |
+| **Distance**  (from camera to scene content)| 5.5m | ![Distribution of distances from camera to point](assets/web_assets/distances_to_point.png)  |
+| **3D Obliqueness of Scene Content** (wrt camera)| 52.5° | ![Distribution of point obliquenesses](assets/web_assets/obliquess.png)  |
+| **Points in view** (for point correspondences) | (median) 15 | ![Distribution of points in camera view](assets/web_assets/number_of_points_in_camera_view.png)  |
 
 
 ## Citing

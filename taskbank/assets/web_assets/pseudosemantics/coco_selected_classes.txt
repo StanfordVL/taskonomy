@@ -1,0 +1,17 @@
+background
+bottle
+chair
+couch
+potted plant
+bed
+dining table
+toilet
+tv
+microwave
+oven
+toaster
+sink
+refrigerator
+book
+clock
+vase
