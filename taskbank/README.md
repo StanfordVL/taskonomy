@@ -198,6 +198,7 @@ Pairwise-Nonfixated-Camera-Pose : non_fixated_pose
   <img src="assets/sbs.png" width="650px" />
   <p>Camera Pose Input (left: test_1.png, right:test.png)</p>
 </div>
+
 Then, we can run the script on our [example image 1](https://github.com/StanfordVL/taskonomy/blob/master/assets/test.png) and [example image 2](https://github.com/StanfordVL/taskonomy/blob/master/assets/test_1.png) as such:
 
 ```bash
