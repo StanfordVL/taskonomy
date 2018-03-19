@@ -56,7 +56,7 @@ Since our task dictionary contains tasks of different dimensional output, we hav
   <img src="assets/decoder_loss.png"  />
 </div>
 
-### Network Losses Evaluation
+### Evaluation: How good are these networks?
 
 See below table for loss comparison. The table shows the proportion of the time that the task network
 beats average estimator (avg), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (rand). More details discussed in [paper](http://taskonomy.vision/):
@@ -65,37 +65,7 @@ beats average estimator (avg), i.e. the best statistically informed guess, and a
   <img src="assets/losses.png" width="500px"  />
 </div>
 
-### Dataset Statistics
 
-The dataset consists of **3.99 million images** from **2265 different buildings**. Below are some statistics about the images which comprise the dataset.
-
-| Property | Mean | Distribution |
-|----|---|----|
-| **Pitch** | -0.77° | ![Distribution of camera pitches](assets/elevations.png) | 
-| **Roll** | 0.0° | ![Distribution of camera roll](assets/rolls.png)  | 
-| **Field of view** | 75° | *Constant*  |
-| **Points in view** | (median) 15 | ![Distribution of points in camera view](assets/number_of_points_in_camera_view.png)  |
-| **Distance to point** | 5.5m | ![Distribution of distances from camera to point](assets/distances_to_point.png)  |
-| **Point obliqueness** | 52.5° | ![Distribution of point obliquenesses](assets/obliquess.png)  |
-
-
-### Citing
-
-If you find the code or the models useful, please cite this paper:
-```
-@inproceedings{zamir2018taskonomy,
-  title={Taskonomy: Disentangling Task Transfer Learning},
-  author={Zamir, Amir R and Sax, Alexander and and Shen, William B and Guibas, Leonidas and Malik, Jitendra and Savarese, Silvio},
-  booktitle={2018 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2018},
-  organization={IEEE}
-}
-```
-
-### License
-
-The code and models are released under the MIT License (refer to the [LICENSE](https://github.com/b0ku1/taskonomy/blob/master/LICENSE) file for details).
- 
 ## Installation
 
 ### Tensorflow
@@ -225,3 +195,37 @@ The script will give us image [`assets/test_pose.png`](https://github.com/b0ku1/
   <p>Test Camera Pose (green is test.png, red is test_1.png)</p>
 </div>
 The ``--store-rep`` and ``--store-pred`` flag all work the same as `run_img_task.py`.
+
+
+### Training Data Statistics
+
+The dataset consists of **3.99 million images** from **2265 different buildings**. The images are **indoors** only. Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
+
+| Property | Mean | Distribution |
+|----|---|----|
+| **Camera Pitch** | -0.77° | ![Distribution of camera pitches](assets/elevations.png) | 
+| **Camera Roll** | 0.0° | ![Distribution of camera roll](assets/rolls.png)  | 
+| **Camera Field of view** | 75° | *Constant*  |
+| **Distance**  (from camera to scene content)| 5.5m | ![Distribution of distances from camera to point](assets/distances_to_point.png)  |
+| **Obliqueness** (scene content wrt camera)| 52.5° | ![Distribution of point obliquenesses](assets/obliquess.png)  |
+| **Points in view** (for point correspondences) | (median) 15 | ![Distribution of points in camera view](assets/number_of_points_in_camera_view.png)  |
+
+
+### Citing
+
+If you find the code or the models useful, please cite this paper:
+```
+@inproceedings{zamir2018taskonomy,
+  title={Taskonomy: Disentangling Task Transfer Learning},
+  author={Zamir, Amir R and Sax, Alexander and and Shen, William B and Guibas, Leonidas and Malik, Jitendra and Savarese, Silvio},
+  booktitle={2018 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2018},
+  organization={IEEE}
+}
+```
+
+### License
+
+The code and models are released under the MIT License (refer to the [LICENSE](https://github.com/b0ku1/taskonomy/blob/master/LICENSE) file for details).
+ 
+
