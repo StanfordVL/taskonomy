@@ -10,7 +10,7 @@ Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik
 See below a figure that demonstrates outputs from each of our task-specific net-works given the same input image (shown at top left):
 
 <div align="center">
-  <img src="assets/task_dict.png" width="500px"  />
+  <img src="assets/task_dict_v.jpg" />
 </div>
 
 
