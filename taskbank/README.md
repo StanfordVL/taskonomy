@@ -161,7 +161,6 @@ Similarly, running `vanishing_point`, `curvature`, `reshade`, `rgb2mist`, `segme
 
 <div align="center">
   <img src="assets/web_assets/sample_outputs.png" />
-  <p>More task outputs</p>
 </div>
 
 ### Storing Representations
