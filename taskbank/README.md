@@ -35,7 +35,7 @@ Table of contents
 
 
 These models are based on specific networks of the [Taskonomy](http://taskonomy.vision/) project.
-For more extensive discussion about Taskonomy and transfer learning please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository solely focuses on provding an easy to use unified bank for the pretrained vision tasks. 21 single image input tasks and 4 quadratic (2 input image) tasks are included. Single input tasks:
+For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository solely focuses on provding an easy to use unified bank for the pretrained vision tasks. 21 single image input tasks and 4 quadratic (2 input image) tasks are included. Single input tasks:
 
 
 ```
@@ -59,18 +59,19 @@ Triplet-Fixated-Camera-Pose     Point-Matching
 
 ### Network Architecture
 
-As shown in the top figure, each task shares the same encoder architexture. The encoder maps input image (256x256) into a representation of size 2048 (16x16x8). Encoder is modified based on [ResNet-50](https://arxiv.org/pdf/1512.03385.pdf) by: 1. replacing `conv5_1`'s stride 2 convolution with stride 1 convolution. 2. No global average pooling.
+As shown in the top figure, each task shares the same encoder architexture. The encoder maps the input image (256x256) into a representation of size 2048 (16x16x8). Hence the encoder architecture and representation size of all tasks are identical. The encoder is modified based on [ResNet-50](https://arxiv.org/pdf/1512.03385.pdf) by: 1. replacing `conv5_1`'s stride 2 convolution with stride 1 convolution. 2. No global average pooling. 
 
-Since our task dictionary contains tasks of different dimensional output, we have a varying decoder architecture. We tried our best to keep the decoder structure compact and varies as little as possible. Also, for different tasks, there are different kind of loss being used. See below table for complete info.
+Also, we trained all of the networks on **the same exact set of input images**, i.e. the pixels seen in the input by all networks are identical and the only difference is in the output space. 
+
+Since the tasks in our dictionary can have different dimensionalities in their output, we have a varying decoder architecture accordingly. We tried to keep the decoder structure compact and varying as little as possible. Also, slighlty different kind of loss could be employed for different tasks accordingly. See below table for the complete information.
 
 <div align="center">
   <img src="assets/decoder_loss.png"  />
 </div>
 
 ### Evaluation: How good are these networks?
-
-See below table for loss comparison. The table shows the proportion of the time that the task network
-beats average estimator (avg), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (rand). More details discussed in [paper](http://taskonomy.vision/):
+For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.vision/). To give a quick overall idea, the table below shows the proportion (%) of a hold-out test set for which the trained networks in the task bank
+were able to beat average estimator (avg), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks. Qualititave results run frame-by-frame on a YouTube video can be examined [here](https://taskonomy.vision/#models).  
 
 <div align="center">
   <img src="assets/losses.png" width="500px"  />
@@ -85,9 +86,7 @@ Install [Tensorflow](https://www.tensorflow.org/install/). We use Version 1.2.1.
 
 ### Python
 
-See [`requirement.txt`](https://github.com/b0ku1/taskonomy/blob/master/requirement.txt) for a list of used packages
-
-The easiest way to install them is through:
+See [`requirement.txt`](https://github.com/b0ku1/taskonomy/blob/master/requirement.txt) for a list of used packages. The easiest way to install them is through:
 ```bash
 pip install -r requirement.txt --no-index
 ```
@@ -200,14 +199,15 @@ Then, we can run the script on our [example image 1](https://github.com/b0ku1/ta
 ```bash
 python tools/run_quad_img_task.py --task non_fixated_pose --img assets/test_1.png,assets/test.png --store assets/test_pose.png
 ```
-Note: camera pose is calculate with reference to the second image (here is `test.png`).
+Note: camera pose is calculate with reference to the second image (here that is `test.png`).
 
 The script will give us image [`assets/test_pose.png`](https://github.com/b0ku1/taskonomy/blob/master/test_places.png):
 <div align="center">
   <img src="assets/test_pose.png" width="388px" />
-  <p>Test Camera Pose (green is test.png, red is test_1.png)</p>
+  <p>Camera Pose Estimation (green represents `test.png`'s camera. Red represents `test_1.png`'s.)</p>
 </div>
-The `--store-rep` and `--store-pred` flags work the same as in singe image task code `run_img_task.py`.
+
+The `--store-rep` and `--store-pred` flags work the same as in singe image task code `run_img_task.py` .
 
 
 ## Training Data Statistics
@@ -220,7 +220,7 @@ The dataset consists of **3.99 million images** from **2265 different buildings*
 | **Camera Roll** | 0.0° | ![Distribution of camera roll](assets/rolls.png)  | 
 | **Camera Field of view** | 75° | *Constant*  |
 | **Distance**  (from camera to scene content)| 5.5m | ![Distribution of distances from camera to point](assets/distances_to_point.png)  |
-| **Obliqueness** (scene content wrt camera)| 52.5° | ![Distribution of point obliquenesses](assets/obliquess.png)  |
+| **3D Obliqueness of Scene Content** (wrt camera)| 52.5° | ![Distribution of point obliquenesses](assets/obliquess.png)  |
 | **Points in view** (for point correspondences) | (median) 15 | ![Distribution of points in camera view](assets/number_of_points_in_camera_view.png)  |
 
 
