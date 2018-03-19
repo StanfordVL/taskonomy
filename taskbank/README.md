@@ -83,18 +83,16 @@ cd taskonomy/taskbank
 ```
 
 
-### Python
 
-See [`requirement.txt`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/requirement.txt) for a list of used packages. 
 
-Step 2: We recommend doing a clean installation of requirements using virtualenv:
+### Step 2: **Python**: See [`requirement.txt`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/requirement.txt) for a list of used packages. We recommend doing a clean installation of requirements using virtualenv:
 ```bash
 conda create -n testenv python=3.4
 source activate testenv
 pip install -r requirement.txt 
 ```
 
-You could also directly install the requirements through the following if you dont want to do the above clean installation via virtualenv:
+You could also directly install the requirements through the following command if you dont want to do the above clean installation via virtualenv:
 ```bash
 pip install -r requirement.txt --no-index
 ```
@@ -157,6 +155,13 @@ Which will give us image [`test_scene_class.png`](https://github.com/StanfordVL/
   <p>Scene Classification on Test Image </p>
 </div>
 
+Similarly, running `vanishing_point`, `curvature`, `reshade`, `rgb2mist`, `segment25d` on [`test.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test.png)returns the following results:
+
+<div align="center">
+  <img src="assets/web_assets/sample_outputs.png" />
+  <p>Scene Classification on Test Image </p>
+</div>
+
 ### Storing Representations
 The flag `--store-rep` enables saving the representation of the image prduced by task's encoder. Add `--store-rep` to the command and the representation will be stored at `${WHERE_TO_STORE}.npy`. For example, running:
 ```bash
@@ -185,23 +190,23 @@ sh tools/download_model_multi.sh
 
 To run a pretrained multi-image model on specific images (in case of Triplet-Fixated-Camera-Pose, `--img` should be `$IMG1,$IMG2,$IMG3` since the task requires 3 images in input. See [task definitions](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf)), do:
 ```bash
-python tools/run_quad_img_task.py --task $TASK --img $IMG1,$IMG2 --store $WHERE_TO_STORE
+python tools/run_multi_img_task.py --task $TASK --img $IMG1,$IMG2 --store $WHERE_TO_STORE
 ```
 Similarly for the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/tools/task_dict.txt). For example, according to the dictionary:
 ```
 Pairwise-Nonfixated-Camera-Pose : non_fixated_pose
 ```
-<div align="center">
-  <img src="assets/web_assets/sbs.png" width="650px" />
-  <p>Camera Pose Estimation - Input Images (left: test_1.png, right:test.png)</p>
-</div>
 
 Then, we can run the script on our [example image 1](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test.png) and [example image 2](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_1.png) as such:
 
 ```bash
-python tools/run_quad_img_task.py --task non_fixated_pose --img assets/test_1.png,assets/test.png --store assets/test_pose.png
+python tools/run_multi_img_task.py --task non_fixated_pose --img assets/test_1.png,assets/test.png --store assets/test_pose.png
 ```
-Note: camera pose is calculate with reference to the second image (here that is `test.png`).
+
+<div align="center">
+  <img src="assets/web_assets/sbs.png" width="650px" />
+  <p>Camera Pose Estimation - Input Images (left: test_1.png, right:test.png)</p>
+</div>
 
 The script will give us [`assets/web_assets/test_pose.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/test_scene_class.png):
 <div align="center">
@@ -209,17 +214,19 @@ The script will give us [`assets/web_assets/test_pose.png`](https://github.com/S
   <p>Camera Pose Estimation (green represents `test.png` 's camera. Red represents `test_1.png` 's.)</p>
 </div>
 
+Note: camera pose is calculate with reference to the second image (here that is `test.png`). 
+
 The `--store-rep` and `--store-pred` flags work the same way as in singe-image tasks (described above).
 
 **Point-Matching**: note that the task point matching returns if the center pixels of input images correspond to the same physical point or not (i.e. if they make a "point correspondence") as either 0 (non-matching) or 1 (matching). No visualization is generated for this task and `--store` is used with flags `--store-rep` and `--store-pred` to determine where to save the representation and predicction. See an example below:  
 
 ```bash
-python tools/run_quad_img_task.py --task point_match --img assets/test_1.png,assets/test.png --store assets/res/point_match_results --store-rep --store-pred
+python tools/run_multi_img_task.py --task point_match --img assets/test_1.png,assets/test.png --store assets/res/point_match_results --store-rep --store-pred
 ```
 
 ## Evaluation: How good are these networks?
-For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.vision/). To give a quick overall idea, the table below shows the proportion (%) of a hold-out test set for which the networks in the task bank
-were able to beat average estimator (`avg`), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks statistically. Qualititave results run frame-by-frame on a YouTube video can be examined [here](https://taskonomy.vision/#models).  
+For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.vision/). To give a quick overall idea, the table below shows the proportion (%) of a hold-out test set on which the networks in the task bank
+were able to beat average estimator (`avg`), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks, statistically. Qualititave results run frame-by-frame on a YouTube video can be examined [here](https://taskonomy.vision/#models).  
 
 <div align="center">
   <img src="assets/web_assets/losses.png" width="500px"  />
@@ -228,7 +235,7 @@ were able to beat average estimator (`avg`), i.e. the best statistically informe
 
 ## Training Data Statistics
 
-The dataset consists of **3.99 million images** from **2265 different buildings**. The images are **indoors** only. Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
+The dataset consists of **3.99 million images** from **2265 different buildings**. The images are from **indoors**. Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
 
 | Property | Mean | Distribution |
 |----|---|----|
