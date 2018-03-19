@@ -136,13 +136,13 @@ Surface-Normal : rgb2sfnorm
   <p>Example Test Image</p>
 </div>
 
-Then, we can run the script on our [example image](https://github.com/StanfordVL/taskonomy/blob/master/assets/test.png) as such:
+Then, we can run the script on our [example image](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test.png) as such:
 
 ```bash
 python tools/run_img_task.py --task rgb2sfnorm --img assets/test.png --store assets/test_sf.png
 ```
 
-Which will give us image [`test_sf.png`](https://github.com/StanfordVL/taskonomy/blob/master/assets/test_sf.png):
+Which will give us image [`test_sf.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_sf.png):
 <div align="center">
   <img src="assets/test_sf.png" width="388px" />
   <p>Test Image Surface Normal Estimation</p>
@@ -158,7 +158,7 @@ Again, we can run the script on our example image using:
 python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_places.png
 ```
 
-Which will give us image [`test_places.png`](https://github.com/StanfordVL/taskonomy/blob/master/assets/test_places.png):
+Which will give us image [`test_places.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_places.png):
 <div align="center">
   <img src="assets/test_places.png" width="388px" />
   <p>Test Image Scene Classification</p>
@@ -201,14 +201,14 @@ Pairwise-Nonfixated-Camera-Pose : non_fixated_pose
   <p>Camera Pose Input (left: test_1.png, right:test.png)</p>
 </div>
 
-Then, we can run the script on our [example image 1](https://github.com/StanfordVL/taskonomy/blob/master/assets/test.png) and [example image 2](https://github.com/StanfordVL/taskonomy/blob/master/assets/test_1.png) as such:
+Then, we can run the script on our [example image 1](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test.png) and [example image 2](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_1.png) as such:
 
 ```bash
 python tools/run_quad_img_task.py --task non_fixated_pose --img assets/test_1.png,assets/test.png --store assets/test_pose.png
 ```
 Note: camera pose is calculate with reference to the second image (here that is `test.png`).
 
-The script will give us image [`assets/test_pose.png`](https://github.com/StanfordVL/taskonomy/blob/master/test_places.png):
+The script will give us image [`assets/test_pose.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_places.png):
 <div align="center">
   <img src="assets/test_pose.png" width="388px" />
   <p>Camera Pose Estimation (green represents `test.png`'s camera. Red represents `test_1.png`'s.)</p>
