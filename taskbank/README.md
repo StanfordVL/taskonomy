@@ -192,7 +192,7 @@ To run a pretrained quadratic model on specific images (in case of Triplet-Fixat
 ```bash
 python tools/run_quad_img_task.py --task $TASK --img $IMG1,$IMG2 --store $WHERE_TO_STORE
 ```
-Similarly for the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/StanfordVL/taskonomy/blob/master/tools/task_dict.txt), for example, according to the dictionary:
+Similarly for the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/tools/task_dict.txt), for example, according to the dictionary:
 ```
 Pairwise-Nonfixated-Camera-Pose : non_fixated_pose
 ```
