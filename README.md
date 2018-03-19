@@ -6,9 +6,8 @@ Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik
 
 ## TASK BANK
 #### See here: https://github.com/StanfordVL/taskonomy/tree/master/taskbank
-#### See more info about TASK BANK here: https://taskonomy.vision/#models
+
+<!--- #### See more info about TASK BANK here: https://taskonomy.vision/#models
 #### Try the live demo here: https://taskonomy.vision/tasks
-
 ## More of code, models, and dataset of Taskonomy coming soon. 
-
-(repository under construction)
+(repository under construction) --->
