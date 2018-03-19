@@ -222,7 +222,7 @@ The `--store-rep` and `--store-pred` flags work the same way as in singe-image t
 **Point-Matching**: note that the task point matching returns if the center pixels of input images correspond to the same physical point or not (i.e. if they make a "point correspondence") as either 0 (non-matching) or 1 (matching). No visualization is generated for this task and `--store` is used with flags `--store-rep` and `--store-pred` to determine where to save the representation and predicction. See an example below:  
 
 ```bash
-python tools/run_multi_img_task.py --task point_match --img assets/test_1.png,assets/test.png --store assets/res/point_match_results --store-rep --store-pred
+python tools/run_multi_img_task.py --task point_match --img assets/test_1.png,assets/test.png --store assets/point_match_results --store-rep --store-pred
 ```
 
 ## Evaluation: How good are these networks?
