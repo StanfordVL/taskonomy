@@ -80,6 +80,13 @@ were able to beat average estimator (`avg`), i.e. the best statistically informe
 
 ## Installation
 
+### Clone the Code from Github
+
+```
+git clone https://github.com/StanfordVL/taskonomy.git
+cd taskonomy/taskbank
+```
+
 ### Tensorflow
 
 Install [Tensorflow](https://www.tensorflow.org/install/). We use Version 1.2.1.
@@ -104,12 +111,7 @@ pip install -r requirement.txt --no-index
 
 ## Running Single Image Models
 
-#### Step 0: Clone the Code from Github
 
-```
-git clone https://github.com/StanfordVL/taskonomy.git
-cd taskonomy/taskbank
-```
 
 #### Step 1: Downloading Pretrained Model
 
