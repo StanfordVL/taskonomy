@@ -131,13 +131,13 @@ python tools/run_img_task.py --task rgb2sfnorm --img assets/test.png --store ass
 ```
 
 <div align="center">
-  <img src="assets/test.png" width="388px" />
+  <img src="assets/test.png" width="288px" />
   <p>Example Test Image</p>
 </div>
 
 Which will give us image [`test_sf.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/test_sf.png):
 <div align="center">
-  <img src="assets/web_assets/test_sf.png" width="388px" />
+  <img src="assets/web_assets/test_sf.png" width="288px" />
   <p>Surface Normal Estimation on the Test Image</p>
 </div>
 
@@ -153,7 +153,7 @@ python tools/run_img_task.py --task class_places --img assets/test.png --store a
 
 Which will give us image [`test_scene_class.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/test_places.png):
 <div align="center">
-  <img src="assets/web_assets/test_scene_class.png" width="388px" />
+  <img src="assets/web_assets/test_scene_class.png" width="288px" />
   <p>Scene Classification on Test Image </p>
 </div>
 
@@ -211,7 +211,7 @@ python tools/run_multi_img_task.py --task non_fixated_pose --img assets/test_1.p
 
 The script will give us [`assets/web_assets/test_pose.png`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/test_scene_class.png):
 <div align="center">
-  <img src="assets/web_assets/test_pose.png" width="388px" />
+  <img src="assets/web_assets/test_pose.png" width="288px" />
   <p>Camera Pose Estimation (green represents `test.png` 's camera. Red represents `test_1.png` 's.)</p>
 </div>
 
