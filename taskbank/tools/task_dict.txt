@@ -1,0 +1,25 @@
+Autoencoder : autoencoder             
+Curvatures : curvature          
+Colorization : colorization   
+Denoising-Autoencoder : denoise
+Depth : rgb2depth                  
+Edge-2D : edge2d   
+Edge-3D : edge3d         
+Euclidean-Distance : rgb2mist
+Inpainting : inpainting_whole
+Jigsaw-Puzzle : jigsaw
+Keypoint-2D : keypoint2d   
+Keypoint-3D : keypoint3d
+Object-Classification : class_1000
+Reshading : reshade
+Room-Layout :room_layout      
+Scene-Classification : class_places
+Segmentation-2D : segment2d
+Segmentation-3D : segment25d
+Segmentation-Semantic : segmentsemantic
+Surface-Normal : rgb2sfnorm
+Vanishing-Point : vanishing_point
+Pairwise-Nonfixated-Camera-Pose : non_fixated_pose
+Pairwise-Fixated-Camera-Pose : fix_pose
+Triplet-Fixated-Camera-Pose : ego_motion
+Point-Matching : point_match
