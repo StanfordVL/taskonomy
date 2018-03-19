@@ -3,7 +3,7 @@
 This repository provides a unified bank of pre-trained networks for **25 vision tasks spanning a wide range of 2D, 3D, and semantic problems**. We provide pretrained models, code for running the models on arbitrary images, as well as code for visualizing results similar to the ones shown below and [here](https://taskonomy.vision/tasks). The figure below shows the outputs for a query image (top left).
 
 <div align="center">
-  <img src="assets/task_dict_v.jpg" />
+  <img src="assets/web_assets/task_dict_v.jpg" />
 </div>
 
 
@@ -21,10 +21,10 @@ Table of contents
 
    * [Introduction](#Introduction)
    * [Installation](#installation)
-   * [Running Single Image Tasks](#running-single-image-tasks)
+   * [Running Single-Image Tasks](#running-single-image-tasks)
         * [Storing Representations](#storing-representations)
         * [Storing Predictions](#storing-predictions)
-   * [Running Multi Image Tasks](#running-multi-image-tasks)
+   * [Running Multi-Image Tasks](#running-multi-image-tasks)
    * [Training Data Statistics](#training-data-statistics)
    * [Citing](#citing)
 
@@ -108,7 +108,7 @@ pip install -r requirement.txt --no-index
 
 ### Tensorflow
 
-You need [Tensorflow](https://www.tensorflow.org/install/). We use Version 1.2.1.
+You need [Tensorflow](https://www.tensorflow.org/install/). We used Version 1.2.1.
 
 
 ## Running Single-Image Tasks
