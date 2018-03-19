@@ -85,7 +85,9 @@ cd taskonomy/taskbank
 
 
 
-### Step 2: **Python**: See [`requirement.txt`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/requirement.txt) for a list of used packages. We recommend doing a clean installation of requirements using virtualenv:
+### Step 2: Install Requirements
+
+**Python**: see [`requirement.txt`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/requirement.txt) for a list of used packages. We recommend doing a clean installation of requirements using virtualenv:
 ```bash
 conda create -n testenv python=3.4
 source activate testenv
@@ -159,7 +161,7 @@ Similarly, running `vanishing_point`, `curvature`, `reshade`, `rgb2mist`, `segme
 
 <div align="center">
   <img src="assets/web_assets/sample_outputs.png" />
-  <p>Scene Classification on Test Image </p>
+  <p>More task outputs</p>
 </div>
 
 ### Storing Representations
