@@ -70,8 +70,8 @@ Since the tasks in our dictionary can have different dimensionalities in their o
 </div>
 
 ### Evaluation: How good are these networks?
-For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.vision/). To give a quick overall idea, the table below shows the proportion (%) of a hold-out test set for which the trained networks in the task bank
-were able to beat average estimator (avg), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks. Qualititave results run frame-by-frame on a YouTube video can be examined [here](https://taskonomy.vision/#models).  
+For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.vision/). To give a quick overall idea, the table below shows the proportion (%) of a hold-out test set for which the networks in the task bank
+were able to beat average estimator (`avg`), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks statistically. Qualititave results run frame-by-frame on a YouTube video can be examined [here](https://taskonomy.vision/#models).  
 
 <div align="center">
   <img src="assets/losses.png" width="500px"  />
@@ -86,25 +86,29 @@ Install [Tensorflow](https://www.tensorflow.org/install/). We use Version 1.2.1.
 
 ### Python
 
-See [`requirement.txt`](https://github.com/b0ku1/taskonomy/blob/master/requirement.txt) for a list of used packages. The easiest way to install them is through:
-```bash
-pip install -r requirement.txt --no-index
-```
+See [`requirement.txt`](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/requirement.txt) for a list of used packages. 
 
-We recommend do a clean installment using virtualenv:
+We recommend doing a clean installment using virtualenv:
 ```bash
 conda create -n testenv python=3.4
 source activate testenv
 pip install -r requirement.txt 
 ```
 
+You can also install the requirements through:
+```bash
+pip install -r requirement.txt --no-index
+```
+
+
+
 ## Running Single Image Models
 
 #### Step 0: Clone the Code from Github
 
 ```
-git clone https://github.com/b0ku1/taskonomy.git
-cd taskonomy
+git clone https://github.com/StanfordVL/taskonomy.git
+cd taskonomy/taskbank
 ```
 
 #### Step 1: Downloading Pretrained Model
@@ -120,7 +124,7 @@ To run a pretrained model on a specific image, do:
 python tools/run_img_task.py --task $TASK --img $PATH_TO_INPUT --store $WHERE_TO_STORE
 ```
 
-For the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/b0ku1/taskonomy/blob/master/tools/task_dict.txt), for example, according to the dictionary:
+For the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/tools/task_dict.txt), for example, according to the dictionary:
 ```
 Surface-Normal : rgb2sfnorm
 ```
@@ -130,13 +134,13 @@ Surface-Normal : rgb2sfnorm
   <p>Example Test Image</p>
 </div>
 
-Then, we can run the script on our [example image](https://github.com/b0ku1/taskonomy/blob/master/assets/test.png) as such:
+Then, we can run the script on our [example image](https://github.com/StanfordVL/taskonomy/blob/master/assets/test.png) as such:
 
 ```bash
 python tools/run_img_task.py --task rgb2sfnorm --img assets/test.png --store assets/test_sf.png
 ```
 
-Which will give us image [`test_sf.png`](https://github.com/b0ku1/taskonomy/blob/master/assets/test_sf.png):
+Which will give us image [`test_sf.png`](https://github.com/StanfordVL/taskonomy/blob/master/assets/test_sf.png):
 <div align="center">
   <img src="assets/test_sf.png" width="388px" />
   <p>Test Image Surface Normal Estimation</p>
@@ -152,7 +156,7 @@ Again, we can run the script on our example image using:
 python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_places.png
 ```
 
-Which will give us image [`test_places.png`](https://github.com/b0ku1/taskonomy/blob/master/assets/test_places.png):
+Which will give us image [`test_places.png`](https://github.com/StanfordVL/taskonomy/blob/master/assets/test_places.png):
 <div align="center">
   <img src="assets/test_places.png" width="388px" />
   <p>Test Image Scene Classification</p>
@@ -186,7 +190,7 @@ To run a pretrained quadratic model on specific images (in case of Triplet-Fixat
 ```bash
 python tools/run_quad_img_task.py --task $TASK --img $IMG1,$IMG2 --store $WHERE_TO_STORE
 ```
-Similarly for the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/b0ku1/taskonomy/blob/master/tools/task_dict.txt), for example, according to the dictionary:
+Similarly for the `--task` flag, find the task name in [Task Name Dictionary](https://github.com/StanfordVL/taskonomy/blob/master/tools/task_dict.txt), for example, according to the dictionary:
 ```
 Pairwise-Nonfixated-Camera-Pose : non_fixated_pose
 ```
@@ -194,14 +198,14 @@ Pairwise-Nonfixated-Camera-Pose : non_fixated_pose
   <img src="assets/sbs.png" width="650px" />
   <p>Camera Pose Input (left: test_1.png, right:test.png)</p>
 </div>
-Then, we can run the script on our [example image 1](https://github.com/b0ku1/taskonomy/blob/master/assets/test.png) and [example image 2](https://github.com/b0ku1/taskonomy/blob/master/assets/test_1.png) as such:
+Then, we can run the script on our [example image 1](https://github.com/StanfordVL/taskonomy/blob/master/assets/test.png) and [example image 2](https://github.com/StanfordVL/taskonomy/blob/master/assets/test_1.png) as such:
 
 ```bash
 python tools/run_quad_img_task.py --task non_fixated_pose --img assets/test_1.png,assets/test.png --store assets/test_pose.png
 ```
 Note: camera pose is calculate with reference to the second image (here that is `test.png`).
 
-The script will give us image [`assets/test_pose.png`](https://github.com/b0ku1/taskonomy/blob/master/test_places.png):
+The script will give us image [`assets/test_pose.png`](https://github.com/StanfordVL/taskonomy/blob/master/test_places.png):
 <div align="center">
   <img src="assets/test_pose.png" width="388px" />
   <p>Camera Pose Estimation (green represents `test.png`'s camera. Red represents `test_1.png`'s.)</p>
@@ -239,6 +243,6 @@ If you find the code or the models useful, please cite this paper:
 
 ### License
 
-The code and models are released under the MIT License (refer to the [LICENSE](https://github.com/b0ku1/taskonomy/blob/master/LICENSE) file for details).
+The code and models are released under the MIT License (refer to the [LICENSE](https://github.com/StanfordVL/taskonomy/blob/master/LICENSE) file for details).
  
 
