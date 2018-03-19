@@ -197,7 +197,7 @@ The script will give us image [`assets/test_pose.png`](https://github.com/b0ku1/
 The ``--store-rep`` and ``--store-pred`` flag all work the same as `run_img_task.py`.
 
 
-### Training Data Statistics
+## Training Data Statistics
 
 The dataset consists of **3.99 million images** from **2265 different buildings**. The images are **indoors** only. Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
 
@@ -211,7 +211,7 @@ The dataset consists of **3.99 million images** from **2265 different buildings*
 | **Points in view** (for point correspondences) | (median) 15 | ![Distribution of points in camera view](assets/number_of_points_in_camera_view.png)  |
 
 
-### Citing
+## Citing
 
 If you find the code or the models useful, please cite this paper:
 ```
