@@ -1,21 +1,30 @@
-# Taskonomy: Disentangling Task Transfer Learning http://taskonomy.vision/ 
-
-CVPR 2018
+# TASK BANK: A Unified Bank of 25 Pretrained Vision Tasks
+### From: "Taskonomy: Disentangling Task Transfer Learning", CVPR 2018.
+### http://taskonomy.vision/ 
 
 Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
 
-## Taskonomy Pretrained Model Testing
+### See sample results of the TASK BANK here: https://taskonomy.vision/#models
+### Try the live demo here: https://taskonomy.vision/tasks
 
-============================
+See below a figure that demonstrates outputs from each of our task-specific net-works given the same input image (shown at top left):
+
+<div align="center">
+  <img src="assets/task_dict.png" width="500px"  />
+</div>
+
+
+## Introduction
+
+This repository provides a unified bank of pre-trained networks for 25 vision tasks. We provide pretrained models, code for running the models on arbitrary images, as well as code for visualizing results similar to the ones shown [here](https://taskonomy.vision/tasks). 
+
 <div align="center">
   <img src="assets/figure.png" />
 </div>
 
-## Introduction
+These models are based on specific networks of the [Taskonomy](http://taskonomy.vision/) project
+For more extensive discussion about Taskonomy and transfer learning please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository solely focuses on provding an easy to use unified bank for vision tasks. 21 single image input tasks and 4 quadratic (2 input image) tasks are included. Single input tasks:
 
-In this repo, we focus on the task specific networks of the [Taskonomy](http://taskonomy.vision/) project. 
-
-Please find more extensive discussion of Taskonomy in our [CVPR 2018 conference paper](http://taskonomy.vision/). This repository contains the task specifics networks and the trained models. A simple visualization code (see also [online demo](http://taskonomy.vision/tasks)) is provided to use the pre-trained models on 21 single image input tasks:
 
 ```
 Autoencoder             Curvatures          Colorization             Denoising-Autoencoder 
@@ -26,18 +35,14 @@ Segmentation-2D         Segmentation-3D     Segmentation-Semantic    Surface-Nor
 Vanishing-Point
 ```
 
-We also have four quadratic tasks, which we provide a python script to get the prediction:
+The 4 quadratic tasks:
 
 ```
 Pairwise-Nonfixated-Camera-Pose Pairwise-Fixated-Camera-Pose
 Triplet-Fixated-Camera-Pose     Point-Matching
 ``` 
 
-See below a figure that demonstrates outputs from each of our task-specific net-works given the same input image (shown at top left):
 
-<div align="center">
-  <img src="assets/task_dict.png" width="500px"  />
-</div>
 
 ### Network Architecture
 
