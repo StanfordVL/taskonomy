@@ -21,10 +21,10 @@ Table of contents
 
    * [Introduction](#Introduction)
    * [Installation](#installation)
-   * [Running Single Image Models](#running-single-image-models)
-        * [Store Representations](#store-representations)
-        * [Store Predictions](#store-predictions)
-   * [Running Multi Image Models](#running-multi-image-models)
+   * [Running Single Image Tasks](#running-single-image-tasks)
+        * [Storing Representations](#storing-representations)
+        * [Storing Predictions](#storing-predictions)
+   * [Running Multi Image Tasks](#running-multi-image-tasks)
    * [Training Data Statistics](#training-data-statistics)
    * [Citing](#citing)
 
@@ -101,20 +101,20 @@ pip install -r requirement.txt
 
 ## Running Single Image Models
 
-### Step 0: Clone the Code from Github
+#### Step 0: Clone the Code from Github
 
 ```
 git clone https://github.com/b0ku1/taskonomy.git
 cd taskonomy
 ```
 
-### Step 1: Downloading Pretrained Model
+#### Step 1: Downloading Pretrained Model
 
 ```
 sh tools/download_model.sh
 ```
 
-### Step 2: Run Demo Script
+#### Step 2: Run Demo Script
 
 To run a pretrained model on a specific image, do:
 ```bash
@@ -159,14 +159,14 @@ Which will give us image [`test_places.png`](https://github.com/b0ku1/taskonomy/
   <p>Test Image Scene Classification</p>
 </div>
 
-### Store Representations
+### Storing Representations
 Use the flag `--store-rep` to store the representation of the image prduced by task's encoder. Add `--store-rep` flag to the command and the representation will be stored at `${WHERE_TO_STORE}.npy`. For example, running:
 ```bash
 python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_places.png --store-rep
 ```
 will store the representation of the image's representation under Scene Classification encoder at `assets/test_places.npy`.
 
-### Store Predictions
+### Storing Predictions
 To save the output of the numerical prediction of the network, e.g. the coordiantes of the predicted vanishing points, besides the visualization of it saved as `.png`, use the flag `--store-pred`. Add `--store-pred` flag to the command and the prediction will be stored at `${WHERE_TO_STORE}_pred.npy`. For example, running:
 ```bash
 python tools/run_img_task.py --task class_places --img assets/test.png --store assets/test_places.png --store-pred
@@ -175,13 +175,13 @@ Will store the prediction of the image's Scene Classification result at `assets/
 
 ## Running Multi Image Models
 
-### Step 1: Downloading Pretrained Model
+#### Step 1: Downloading Pretrained Model
 
 ```
 sh tools/download_model_quadratic.sh
 ```
 
-### Step 2: Run Demo Script
+#### Step 2: Run Demo Script
 
 To run a pretrained quadratic model on specific images (in case of Triplet-Fixated-Camera-Pose, `--img` should be `$IMG1,$IMG2,$IMG3`), do:
 ```bash
@@ -207,7 +207,7 @@ The script will give us image [`assets/test_pose.png`](https://github.com/b0ku1/
   <img src="assets/test_pose.png" width="388px" />
   <p>Test Camera Pose (green is test.png, red is test_1.png)</p>
 </div>
-The ``--store-rep`` and ``--store-pred`` flags work the same as in singe image task code `run_img_task.py`.
+The `--store-rep` and `--store-pred` flags work the same as in singe image task code `run_img_task.py`.
 
 
 ## Training Data Statistics
