@@ -87,9 +87,6 @@ git clone https://github.com/StanfordVL/taskonomy.git
 cd taskonomy/taskbank
 ```
 
-### Tensorflow
-
-Install [Tensorflow](https://www.tensorflow.org/install/). We use Version 1.2.1.
 
 ### Python
 
@@ -107,9 +104,12 @@ You can also install the requirements through:
 pip install -r requirement.txt --no-index
 ```
 
+### Tensorflow
+
+You need [Tensorflow](https://www.tensorflow.org/install/). We use Version 1.2.1.
 
 
-## Running Single Image Models
+## Running Single Image Tasks
 
 
 
@@ -178,7 +178,7 @@ python tools/run_img_task.py --task class_places --img assets/test.png --store a
 ```
 Will store the prediction of the image's Scene Classification result at `assets/test_places_pred.npy`.
 
-## Running Multi Image Models
+## Running Multi Image Tasks
 
 #### Step 1: Downloading Pretrained Model
 
