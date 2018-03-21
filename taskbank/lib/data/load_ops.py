@@ -423,7 +423,8 @@ def ab_image_to_prob(img, new_dims, root, interp_order=1):
     """
     img = resize_image( img, new_dims, interp_order ).astype('uint8')
     img = skimage.color.rgb2lab(img)[:,:,1:]
-    cc = np.load(os.path.join(root, 'lib', 'data', 'pts_in_hull.npy'))
+    curr_dir = os.path.dirname(os.path.realpath(__file__))
+    cc = np.load(os.path.join(curr_dir, 'pts_in_hull.npy'))
     K = cc.shape[0]
     NN = 10
     sigma = 5.
@@ -443,7 +444,7 @@ def ab_image_to_prob(img, new_dims, root, interp_order=1):
     encoded = encoded_flattened.reshape([img.shape[0], img.shape[1], K])
 
     ############## Prior Boost Mask #################
-    prior_factor = np.load(os.path.join(root,'lib', 'data', 'prior_factor_in_door.npy'))
+    prior_factor = np.load(os.path.join(curr_dir, 'prior_factor_in_door.npy'))
     encoded_maxid = np.argmax(encoded, axis=-1)
     mask = prior_factor[encoded_maxid]
 

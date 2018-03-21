@@ -82,8 +82,6 @@ def classification(predicted, synset, to_store_name):
 
 def semseg_single_image( predicted, img, to_store_name ):
     label = np.argmax(predicted, axis=-1)
-    import pdb
-    pdb.set_trace()
     COLORS = ('white','red', 'blue', 'yellow', 'magenta', 
             'green', 'indigo', 'darkorange', 'cyan', 'pink', 
             'yellowgreen', 'black', 'darkgreen', 'brown', 'gray',
