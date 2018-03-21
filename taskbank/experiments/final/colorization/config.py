@@ -108,7 +108,8 @@ def get_cfg( nopause=False ):
     cfg['target_domain_name'] = 'rgb'
     cfg['target_preprocessing_fn'] = load_ops.ab_image_to_prob
     cfg['target_preprocessing_fn_kwargs'] = {
-            'new_dims': cfg['target_dim'],
+            'new_dims': cfg['target_dim']
+        }
     cfg['mask_by_target_func'] = True
 
     # masks 

@@ -92,6 +92,8 @@ def get_cfg( nopause=False ):
     cfg['target_dtype'] = tf.int64
     cfg['target_from_filenames'] = load_ops.jigsaw_rand_index
     cfg['find_target_in_config'] = True
+    cfg['target_dict'] = np.load(os.path.join(os.path.dirname(os.path.realpath(__file__)),
+        '../../../lib/data', 'jigsaw_max_hamming_set.npy'))
 
     # masks 
     cfg['metric_net'] = encoder_multilayers_fc_bn
