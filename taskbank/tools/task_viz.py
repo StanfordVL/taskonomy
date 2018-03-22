@@ -523,10 +523,11 @@ def plot_room_layout( predicted, img, name, prev, cube_only=False, overlay=False
         predicted = predicted * 0.66 + prev[0] * 0.22 + prev[1] * 0.07 + + prev[2] * 0.02 + + prev[3] * 0.02 + + prev[4] * 0.01
     fig = plt.figure(figsize=(5,5))
     ax = fig.add_subplot(1, 1, 1)
+    predicted[-3:] = np.absolute(predicted[-3:])
     if cube_only:
         predicted[:3] = [0,0,-1]
         if keep_ratio:
-            predicted[-3:] = 7 * predicted[-3:] / np.prod(predicted[-3:])**(1/3)
+            predicted[-3:] = 7 * predicted[-3:] / np.prod(predicted[-3:]) ** (1/3)
         else:
             predicted[-3:] = [8,8,8]
     corners_for_cam_prediction, edge_lengths_pred = get_cam_corners_and_edge_ordered(predicted)
