@@ -1,12 +1,11 @@
-# TASK BANK: A Unified Bank of 25 Pretrained Visual Estimators
-
-This repository shares a unified bank of pretrained models for **25 vision tasks spanning a wide range of 2D, 3D, and semantic problems**. Given a query image, the produced 25 estimations give a broad visual understanding useful for different purposes. The networks can be used individually as well. We share pretrained networks, code for running them on arbitrary images, and code for visualizing results similar to the ones shown below and [here](https://taskonomy.vision/tasks). This figure shows the outputs for a sample query (top left):
 
 <div align="center">
-  <img src="assets/web_assets/task_dict_v.jpg" />
+  <img src="assets/web_assets/taskbank_tile_GIF.gif"  width="900px" />
 </div>
 
+# TASK BANK: A Unified Bank of 25 Visual Estimators
 
+This repository shares a unified bank of pretrained models for **25 vision tasks spanning a wide range of 2D, 3D, and semantic problems**. Given a query image, the produced 25 estimations give a broad visual understanding useful for different purposes. The networks can be used individually as well. We share pretrained networks, code for running them on arbitrary images, and code for visualizing results similar to the ones shown below. The following figure shows the outputs for a sample query (top left). You can watch a video of the networks applied frame-by-frame on a [YouTube video here](https://youtu.be/SUq1CiX-KzM?t=1m52s).
 
 ### See sample results of the TASK BANK here: https://taskonomy.vision/#models
 ### Try the live demo here: https://taskonomy.vision/tasks
@@ -14,6 +13,10 @@ This repository shares a unified bank of pretrained models for **25 vision tasks
 Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
 
 http://taskonomy.vision/ 
+
+<div align="center">
+  <img src="assets/web_assets/task_dict_v.jpg" />
+</div>
 
 
 Table of contents
@@ -99,7 +102,7 @@ If you dont want to do the above clean installation via virtualenv, you could al
 pip install -r requirement.txt --no-index
 ```
 
-**Tensorflow**: Note that you need [Tensorflow](https://www.tensorflow.org/install/). We used Version 1.2.1.
+**Tensorflow**: Note that you need [Tensorflow](https://www.tensorflow.org/install/). We used Version 1.5. If you use the above virtualenv, Tensorflow will be automatically installed therein. 
 
 
 ## Running Single-Image Tasks
@@ -237,7 +240,7 @@ To give an overall idea about the quality of the bank, the table below shows the
 
 ## Training Data Statistics
 
-The dataset consists of **3.99 million images** from **2265 different buildings**. The images are from **indoors**. Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
+The dataset consists of **3.99 million images** from **2265 different buildings**. The images are from **indoors**. Images with people visible were exluded. Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
 
 | Property | Mean | Distribution |
 |----|---|----|
