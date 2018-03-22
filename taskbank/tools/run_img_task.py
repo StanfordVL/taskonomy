@@ -104,7 +104,7 @@ def run_to_task():
     low_sat_tasks = 'autoencoder curvature denoise edge2d edge3d \
     keypoint2d keypoint3d \
     reshade rgb2depth rgb2mist rgb2sfnorm \
-    segment25d segment2d'.split()
+    segment25d segment2d room_layout'.split()
     if task in low_sat_tasks:
         cfg['input_preprocessing_fn'] = load_ops.resize_rescale_image_low_sat
 
