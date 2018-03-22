@@ -102,7 +102,7 @@ If you dont want to do the above clean installation via virtualenv, you could al
 pip install -r requirement.txt --no-index
 ```
 
-**Tensorflow**: Note that you need [Tensorflow](https://www.tensorflow.org/install/). We used Version 1.2.1.
+**Tensorflow**: Note that you need [Tensorflow](https://www.tensorflow.org/install/). We used Version 1.5. If you use the above virtualenv, Tensorflow will be automatically installed therein. 
 
 
 ## Running Single-Image Tasks
