@@ -240,7 +240,7 @@ To give an overall idea about the quality of the bank, the table below shows the
 
 ## Training Data Statistics
 
-The dataset consists of **3.99 million images** from **2265 different buildings**. The images are from **indoors**. Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
+The dataset consists of **3.99 million images** from **2265 different buildings**. The images are from **indoors**. Images with people visible were exluded. Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
 
 | Property | Mean | Distribution |
 |----|---|----|
