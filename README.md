@@ -1,4 +1,4 @@
-# Taskonomy: Disentangling Task Transfer Learning http://taskonomy.vision/ 
+# [Taskonomy: Disentangling Task Transfer Learning](https://taskonomy.vision/)
 
 CVPR 2018. [Oral]
 
