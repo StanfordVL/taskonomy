@@ -5,7 +5,7 @@
 
 # TASK BANK: A Unified Bank of 25 Visual Estimators
 
-This repository shares a unified bank of pretrained models for **25 vision tasks spanning a wide range of 2D, 3D, and semantic problems**. Given a query image, the produced 25 estimations give a broad visual understanding useful for different purposes. The networks can be used individually as well. We share pretrained networks, code for running them on arbitrary images, and code for visualizing results similar to the ones shown below. The following figure shows the outputs for a sample query (top left). You can watch a video of the networks applied frame-by-frame on a [YouTube video here](https://youtu.be/SUq1CiX-KzM?t=1m52s).
+This repository shares a unified bank of pretrained models for **25 vision tasks spanning a wide range of 2D, 3D, and semantic problems**. Given a query image, the produced 25 estimations give a broad visual understanding useful for different purposes. The networks can be used individually as well. We share pretrained networks, easy to use code for running them on arbitrary images, and code for visualizing results similar to the ones shown below. The following figure shows the outputs for a sample query (top left). You can watch a video of the networks applied frame-by-frame on a [YouTube video here](https://youtu.be/SUq1CiX-KzM?t=1m52s).
 
 ### See sample results of the TASK BANK here: https://taskonomy.vision/#models
 ### Try the live demo here: https://taskonomy.vision/tasks
@@ -64,7 +64,7 @@ Triplet-Fixated-Camera-Pose     Point-Matching
 
 ### Network Architecture
 
-As shown in the top figure, each task shares the same encoder architecture. The encoder maps the input image (256x256) into a representation of size 2048 (16x16x8). Hence the encoder architecture and representation size of all tasks are identical. The encoder is modified based on [ResNet-50](https://arxiv.org/pdf/1512.03385.pdf) by: 1. replacing `conv5_1`'s stride 2 convolution with stride 1 convolution. 2. No global average pooling. 
+As shown in the figure above, each task shares the same encoder architecture. The encoder maps the input image (256x256) into a representation of size 2048 (16x16x8). Hence the encoder architecture and representation size of all tasks are identical. The encoder is modified based on [ResNet-50](https://arxiv.org/pdf/1512.03385.pdf) by: 1. replacing `conv5_1`'s stride 2 convolution with stride 1 convolution. 2. No global average pooling. 
 
 Also, we trained all of the networks on **the same exact set of input images**, i.e. the pixels seen in the input by all networks are identical and the only difference is in the output space. 
 
@@ -240,7 +240,7 @@ To give an overall idea about the quality of the bank, the table below shows the
 
 ## Training Data Statistics
 
-The dataset consists of **3.99 million images** from **2265 different buildings**. The images are from **indoors**. Images with people visible were exluded. Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
+The dataset consists of **3.99 million images** from **2265 different buildings**. The images are from **indoors**. Images with people visible were exluded and we didn't include camera roll (pitch and yaw included). Below are some statistics about the images which comprise the training dataset. If your query images severly deviate from these statistics, the performance is expected to degrade. 
 
 | Property | Mean | Distribution |
 |----|---|----|
