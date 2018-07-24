@@ -20,8 +20,7 @@ The annotations of a sample image for a subset of 15 tasks:
 
 
 ## Data Statistics
-4638587
-The dataset consists of **4.6 million images** from **537 different buildings**. The images are from **indoor scenes**. Images with people visible were exluded and we didn't include camera roll (pitch and yaw included). Below are some statistics about the images which comprise the dataset.
+The dataset consists of over **4.6 million images** from **537 different buildings**. The images are from **indoor scenes**. Images with people visible were exluded and we didn't include camera roll (pitch and yaw included). Below are some statistics about the images which comprise the dataset.
 
 ### Image-level statistics
 
