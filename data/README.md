@@ -2,16 +2,18 @@
 
 This repository shares a multi-annotated dataset from Taskonomy paper, including over 4.5 million images from over 500 buildings. Each image has annotations for every one of the 2D, 3D, and semantic tasks in Taskonomy's dictionary (see below). For more details, please see the [CVPR 2018 paper](http://taskonomy.vision/#paper).
 
-Currently, we are sharing a small fraction of the dataset as a sample.
+Currently, we are using a single model (only a small fraction of the dataset) as a sample. For the full dataset, please contact the authors. 
 
-### See sample results of the TASK BANK trained on the taskonomy here: https://taskonomy.vision/#models
-### Try the live demo here: https://taskonomy.vision/tasks
 #### Reference Paper: "Taskonomy: Disentangling Task Transfer Learning", CVPR 2018.
 Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
 
-http://taskonomy.vision/ 
+| Website | See sample model |
+|----|----|
+|[![Website front page](assets/web_frontpage_small.png)](http://taskonomy.vision/ )|[![Example model](assets/cauthron_small.png)](cauthron)|
 
- 
+ ### See sample results of the TASK BANK trained on the taskonomy here: https://taskonomy.vision/#models
+### Try the live demo here: https://taskonomy.vision/tasks
+
 The annotations of a sample image for a subset of 15 tasks:
 <div align="center">
   <img src="http://taskonomy.vision/static/images/dataset_thumbnail.png"  width="900px" />
