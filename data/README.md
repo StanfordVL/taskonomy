@@ -6,18 +6,33 @@
 
 **Annotations of a sample image.** Labels are shown for a subset of 15 tasks.
 
+## Intro 
 
-This repository shares a multi-annotated dataset from Taskonomy paper, including over 4.5 million images from over 500 buildings. Each image has annotations for every one of the 2D, 3D, and semantic tasks in Taskonomy's dictionary (see below). For more details, please see the [CVPR 2018 paper](http://taskonomy.vision/#paper).
+
+This repository shares a multi-annotated dataset from the following paper:
+
+**Taskonomy: Disentangling Task Transfer Learning**, CVPR 2018.
+Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
+
+The dataset includes over 4.5 million images from over 500 buildings. Each image has annotations for every one of the 2D, 3D, and semantic tasks in Taskonomy's dictionary (see below). For more details, please see the [CVPR 2018 paper](http://taskonomy.vision/#paper).
 
 Currently, we are using a single model (only a small fraction of the dataset) as a sample. For the full dataset, please contact the authors. 
 
+#### Website and sample data
 | [Website](http://taskonomy.vision/) | [See sample model](http://taskonomy.vision/)|
 |:----:|:----:|
 | [![Website front page](assets/web_frontpage_small.png)](http://taskonomy.vision/ )|```Cauthron``` [![Example model](assets/cauthron_small.png)](cauthron)|
 
-#### Reference Paper: "Taskonomy: Disentangling Task Transfer Learning", CVPR 2018.
-Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
 
+## Contents 
+- Intro
+- Website and sample model
+- Data Statistics
+  - Image-level statistics
+  - Point-level statistics
+  - Camera-level statistics
+  - Model-level statistics
+- Explanation of folder structure and points
 
 
 
