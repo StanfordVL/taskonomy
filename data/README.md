@@ -24,15 +24,28 @@ Currently, we are using a single model (only a small fraction of the dataset) as
 | [![Website front page](assets/web_frontpage_small.png)](http://taskonomy.vision/ )|```Cauthron``` [![Example model](assets/cauthron_small.png)](cauthron)|
 
 
+## Citing
+
+If you find the code, data, or the models useful, please cite this paper:
+```
+@inproceedings{zamir2018taskonomy,
+  title={Taskonomy: Disentangling Task Transfer Learning},
+  author={Zamir, Amir R and Sax, Alexander and Shen, William B and Guibas, Leonidas and Malik, Jitendra and Savarese, Silvio},
+  booktitle={2018 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2018},
+  organization={IEEE}
+}
+```
+
 ## Contents 
-- Intro
-- Website and sample model
-- Data Statistics
+- [Intro](#intro)
+- [Website and sample model](#website-and-sample-data)
+- [Data Statistics](#data-statistics)
   - Image-level statistics
   - Point-level statistics
   - Camera-level statistics
   - Model-level statistics
-- Explanation of folder structure and points
+- [Explanation of folder structure and points](#data-structure)
 
 
 
@@ -130,15 +143,3 @@ segment_unsup25d/
 
 
 
-## Citing
-
-If you find the code, data, or the models useful, please cite this paper:
-```
-@inproceedings{zamir2018taskonomy,
-  title={Taskonomy: Disentangling Task Transfer Learning},
-  author={Zamir, Amir R and Sax, Alexander and Shen, William B and Guibas, Leonidas and Malik, Jitendra and Savarese, Silvio},
-  booktitle={2018 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2018},
-  organization={IEEE}
-}
-```
