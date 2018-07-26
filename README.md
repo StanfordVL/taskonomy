@@ -6,6 +6,14 @@ This repository contains [pretrained models](https://github.com/StanfordVL/tasko
 
 Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
 
+
+| [TASK BANK](https://github.com/StanfordVL/taskonomy/tree/master/taskbank) | [DATASET](https://github.com/StanfordVL/taskonomy/tree/master/data) |
+|:-----|:-----|
+| The `taskbank` folder contains information about our pretrained models, and scripts to download them. There are sample outputs, and links to live demos. | The `data` folder contains information and statistics about the dataset, some sample data, and instructions for how to download the full dataset. |
+| [![models](taskbank/assets/web_assets/taskbank_tile_GIF_crop.gif)](https://github.com/StanfordVL/taskonomy/tree/master/taskbank) | [![cauthron](data/assets/cauthron_small.png)](https://github.com/StanfordVL/taskonomy/tree/master/data) |
+
+
+
 ## Citation
 If you find the code, models, or data useful, please cite this paper:
 ```
@@ -17,16 +25,6 @@ If you find the code, models, or data useful, please cite this paper:
   organization={IEEE}
 }
 ```
-
-## [TASK BANK](https://github.com/StanfordVL/taskonomy/tree/master/taskbank)
-The README contains additional info about the models, as well as the data they were trained on. There are sample outputs, and links to live demos.
-
-## [DATASET](https://github.com/StanfordVL/taskonomy/tree/master/data)
-The README contains information and statictics about the dataset used for Taskonomy. There are also links to sample data as well as instructions for downloading the full dataset.
-
-
-
-
 <!--- #### See more info about TASK BANK here: https://taskonomy.vision/#models
 #### Try the live demo here: https://taskonomy.vision/tasks
 ## More of code, models, and dataset of Taskonomy coming soon. 
