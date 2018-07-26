@@ -8,7 +8,7 @@ Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik
 
 
 
-| Subfolder: [TASK BANK](https://github.com/StanfordVL/taskonomy/tree/master/taskbank) | Subfolder: [DATASET](https://github.com/StanfordVL/taskonomy/tree/master/data) |
+| [TASK BANK](https://github.com/StanfordVL/taskonomy/tree/master/taskbank) | [DATASET](https://github.com/StanfordVL/taskonomy/tree/master/data) |
 |:-----|:-----|
 | The `taskbank` folder contains information about our pretrained models, and scripts to download them. There are sample outputs, and links to live demos. | The `data` folder contains information and statistics about the dataset, some sample data, and instructions for how to download the full dataset. |
 | [![models](taskbank/assets/web_assets/taskbank_tile_GIF_crop.gif)](https://github.com/StanfordVL/taskonomy/tree/master/taskbank) | [![cauthron](data/assets/cauthron_small.png)](https://github.com/StanfordVL/taskonomy/tree/master/data) |
