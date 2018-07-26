@@ -2,7 +2,7 @@
 
 This repository contains [pretrained models](https://github.com/StanfordVL/taskonomy/tree/master/taskbank) and [sample data](https://github.com/StanfordVL/taskonomy/tree/master/data) for the following paper
 
-[Taskonomy: Disentangling Task Transfer Learning](https://taskonomy.vision/) (CVPR 2018, Best Paper Award)
+#### [Taskonomy: Disentangling Task Transfer Learning](https://taskonomy.vision/) (CVPR 2018, Best Paper Award)
 
 Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
 
