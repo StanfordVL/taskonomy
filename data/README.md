@@ -19,9 +19,9 @@ The dataset includes over 4.5 million images from over 500 buildings. **Each ima
 Here we are sharing a single model (only a small fraction of the dataset) as a sample. For the full dataset, please contact the authors to receive the download instructions. 
 
 #### Website and sample data
-| [Website](http://taskonomy.vision/) | [See sample model](http://taskonomy.vision/)|
+| [Website](http://taskonomy.vision/) | [See sample model](https://github.com/alexsax/taskonomy-sample-model-1)|
 |:----:|:----:|
-| [![Website front page](assets/web_frontpage_small.png)](http://taskonomy.vision/ )|```Cauthron``` [![Example model](assets/cauthron_small.png)](cauthron)|
+| [![Website front page](assets/web_frontpage_small.png)](http://taskonomy.vision/)|```Cauthron``` [![Example model](assets/cauthron_small.png)](https://github.com/alexsax/taskonomy-sample-model-1)|
 
 
 
