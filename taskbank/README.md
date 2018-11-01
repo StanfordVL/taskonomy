@@ -9,7 +9,7 @@ This repository shares a unified bank of pretrained models for **25 vision tasks
 
 ### See sample results of the TASK BANK here: https://taskonomy.vision/#models
 ### Try the live demo here: https://taskonomy.vision/tasks
-#### Reference Paper: "Taskonomy: Disentangling Task Transfer Learning", CVPR 2018.
+#### Reference Paper: "Taskonomy: Disentangling Task Transfer Learning", CVPR 2018. [Best Paper award]
 Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
 
 http://taskonomy.vision/ 
