@@ -1,6 +1,6 @@
 # [Taskonomy: Disentangling Task Transfer Learning](https://taskonomy.vision/)
 
-This repository contains [pretrained models](https://github.com/StanfordVL/taskonomy/tree/master/taskbank) and [sample data](https://github.com/StanfordVL/taskonomy/tree/master/data) for the following paper
+This repository contains [pretrained models](https://github.com/StanfordVL/taskonomy/tree/master/taskbank), [sample data](https://github.com/StanfordVL/taskonomy/tree/master/data), [code](https://github.com/StanfordVL/taskonomy/tree/master/code), and [results](https://github.com/StanfordVL/taskonomy/tree/master/results) for the following paper:
 
 #### [Taskonomy: Disentangling Task Transfer Learning](https://taskonomy.vision/) (CVPR 2018, Best Paper Award)
 
