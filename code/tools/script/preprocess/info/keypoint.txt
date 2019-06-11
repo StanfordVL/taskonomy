@@ -1,0 +1,55 @@
+Image: /home/ubuntu/s3/2fycrku4FjW/keypoint/point_0_view_0_domain_keypoint.png
+  Format: PNG (Portable Network Graphics)
+  Mime type: image/png
+  Class: DirectClass
+  Geometry: 512x512+0+0
+  Units: Undefined
+  Type: Grayscale
+  Endianess: Undefined
+  Colorspace: Gray
+  Depth: 16-bit
+  Channel depth:
+    gray: 16-bit
+  Channel statistics:
+    Pixels: 262144
+    Gray:
+      min: 0 (0)
+      max: 55796 (0.851392)
+      mean: 5631.76 (0.0859351)
+      standard deviation: 7223.57 (0.110225)
+      kurtosis: 0.508596
+      skewness: 1.14401
+  Rendering intent: Undefined
+  Gamma: 1
+  Background color: gray(255)
+  Border color: gray(223)
+  Matte color: gray(189)
+  Transparent color: gray(0)
+  Interlace: None
+  Intensity: Rec709Luminance
+  Compose: Over
+  Page geometry: 512x512+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: Zip
+  Orientation: Undefined
+  Properties:
+    date:create: 1970-01-01T00:00:00+00:00
+    date:modify: 2017-06-29T17:13:05+00:00
+    png:IHDR.bit-depth-orig: 16
+    png:IHDR.bit_depth: 16
+    png:IHDR.color-type-orig: 0
+    png:IHDR.color_type: 0 (Grayscale)
+    png:IHDR.interlace_method: 0 (Not interlaced)
+    png:IHDR.width,height: 512, 512
+    signature: d5cc9ce68e2af628fd1a3c3db6b0a987fcd52aae2c9e22072b92423a54b9a13d
+  Artifacts:
+    filename: /home/ubuntu/s3/2fycrku4FjW/keypoint/point_0_view_0_domain_keypoint.png
+    verbose: true
+  Tainted: False
+  Filesize: 233KB
+  Number pixels: 262K
+  Pixels per second: 8.738MB
+  User time: 0.010u
+  Elapsed time: 0:01.030
+  Version: ImageMagick 6.8.9-9 Q16 x86_64 2017-05-26 http://www.imagemagick.org

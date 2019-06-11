@@ -1,0 +1,88 @@
+Image: /home/ubuntu/s3/2fycrku4FjW/normal/point_0_view_0_domain_normal.png
+  Format: PNG (Portable Network Graphics)
+  Mime type: image/png
+  Class: DirectClass
+  Geometry: 512x512+0+0
+  Resolution: 28.35x28.35
+  Print size: 18.06x18.06
+  Units: PixelsPerCentimeter
+  Type: TrueColor
+  Endianess: Undefined
+  Colorspace: sRGB
+  Depth: 8-bit
+  Channel depth:
+    red: 8-bit
+    green: 8-bit
+    blue: 8-bit
+  Channel statistics:
+    Pixels: 262144
+    Red:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 163.428 (0.640895)
+      standard deviation: 82.6336 (0.324053)
+      kurtosis: -1.39696
+      skewness: -0.15667
+    Green:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 133.425 (0.523235)
+      standard deviation: 38.6222 (0.151459)
+      kurtosis: 3.55843
+      skewness: 0.434678
+    Blue:
+      min: 0 (0)
+      max: 191 (0.74902)
+      mean: 65.288 (0.256031)
+      standard deviation: 49.5797 (0.19443)
+      kurtosis: -1.63408
+      skewness: -0.157714
+  Image statistics:
+    Overall:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 120.714 (0.473387)
+      standard deviation: 59.9392 (0.235056)
+      kurtosis: 2.74131
+      skewness: 0.542226
+  Rendering intent: Perceptual
+  Gamma: 0.454545
+  Chromaticity:
+    red primary: (0.64,0.33)
+    green primary: (0.3,0.6)
+    blue primary: (0.15,0.06)
+    white point: (0.3127,0.329)
+  Background color: white
+  Border color: srgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Interlace: None
+  Intensity: Undefined
+  Compose: Over
+  Page geometry: 512x512+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: Zip
+  Orientation: Undefined
+  Properties:
+    date:create: 1970-01-01T00:00:00+00:00
+    date:modify: 2017-06-29T17:13:12+00:00
+    png:IHDR.bit-depth-orig: 8
+    png:IHDR.bit_depth: 8
+    png:IHDR.color-type-orig: 2
+    png:IHDR.color_type: 2 (Truecolor)
+    png:IHDR.interlace_method: 0 (Not interlaced)
+    png:IHDR.width,height: 512, 512
+    png:pHYs: x_res=2835, y_res=2835, units=1
+    png:sRGB: intent=0 (Perceptual Intent)
+    signature: 3fbcffe055a1353b2da7820f8a82eff9c9d83555af79e5dd84edfc72a2ab36b6
+  Artifacts:
+    filename: /home/ubuntu/s3/2fycrku4FjW/normal/point_0_view_0_domain_normal.png
+    verbose: true
+  Tainted: False
+  Filesize: 187KB
+  Number pixels: 262K
+  Pixels per second: 6.554MB
+  User time: 0.000u
+  Elapsed time: 0:01.039
+  Version: ImageMagick 6.8.9-9 Q16 x86_64 2017-05-26 http://www.imagemagick.org

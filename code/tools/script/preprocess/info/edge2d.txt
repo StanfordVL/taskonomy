@@ -1,0 +1,55 @@
+Image: /home/ubuntu/s3/2fycrku4FjW/edge2d/point_0_view_0_domain_edge2d.png
+  Format: PNG (Portable Network Graphics)
+  Mime type: image/png
+  Class: DirectClass
+  Geometry: 512x512+0+0
+  Units: Undefined
+  Type: Grayscale
+  Endianess: Undefined
+  Colorspace: Gray
+  Depth: 16-bit
+  Channel depth:
+    gray: 16-bit
+  Channel statistics:
+    Pixels: 262144
+    Gray:
+      min: 0 (0)
+      max: 7299 (0.111376)
+      mean: 910.013 (0.0138859)
+      standard deviation: 1078.91 (0.0164631)
+      kurtosis: 5.3795
+      skewness: 2.12222
+  Rendering intent: Undefined
+  Gamma: 1
+  Background color: gray(255)
+  Border color: gray(223)
+  Matte color: gray(189)
+  Transparent color: gray(0)
+  Interlace: None
+  Intensity: Rec709Luminance
+  Compose: Over
+  Page geometry: 512x512+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: Zip
+  Orientation: Undefined
+  Properties:
+    date:create: 1970-01-01T00:00:00+00:00
+    date:modify: 2017-06-29T17:13:01+00:00
+    png:IHDR.bit-depth-orig: 16
+    png:IHDR.bit_depth: 16
+    png:IHDR.color-type-orig: 0
+    png:IHDR.color_type: 0 (Grayscale)
+    png:IHDR.interlace_method: 0 (Not interlaced)
+    png:IHDR.width,height: 512, 512
+    signature: 3b17e23af198bb591b288785b68e151981b10f7d3ea2092f635e74ebf5ead941
+  Artifacts:
+    filename: /home/ubuntu/s3/2fycrku4FjW/edge2d/point_0_view_0_domain_edge2d.png
+    verbose: true
+  Tainted: False
+  Filesize: 325KB
+  Number pixels: 262K
+  Pixels per second: 6.554MB
+  User time: 0.010u
+  Elapsed time: 0:01.039
+  Version: ImageMagick 6.8.9-9 Q16 x86_64 2017-05-26 http://www.imagemagick.org

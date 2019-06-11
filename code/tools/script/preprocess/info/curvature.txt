@@ -1,0 +1,88 @@
+Image: /home/ubuntu/s3/2fycrku4FjW/curvature/point_0_view_0_domain_curvature.png
+  Format: PNG (Portable Network Graphics)
+  Mime type: image/png
+  Class: DirectClass
+  Geometry: 512x512+0+0
+  Resolution: 28.35x28.35
+  Print size: 18.06x18.06
+  Units: PixelsPerCentimeter
+  Type: TrueColor
+  Endianess: Undefined
+  Colorspace: sRGB
+  Depth: 8-bit
+  Channel depth:
+    red: 8-bit
+    green: 8-bit
+    blue: 1-bit
+  Channel statistics:
+    Pixels: 262144
+    Red:
+      min: 0 (0)
+      max: 254 (0.996078)
+      mean: 137.921 (0.540866)
+      standard deviation: 48.3263 (0.189515)
+      kurtosis: 1.18108
+      skewness: 0.0575566
+    Green:
+      min: 0 (0)
+      max: 254 (0.996078)
+      mean: 125.09 (0.490551)
+      standard deviation: 21.8794 (0.0858015)
+      kurtosis: 19.0216
+      skewness: -3.0805
+    Blue:
+      min: 0 (0)
+      max: 0 (0)
+      mean: 0 (0)
+      standard deviation: 0 (0)
+      kurtosis: 0
+      skewness: 0
+  Image statistics:
+    Overall:
+      min: 0 (0)
+      max: 254 (0.996078)
+      mean: 87.6704 (0.343805)
+      standard deviation: 30.6275 (0.120108)
+      kurtosis: 46.6802
+      skewness: -1.32866
+  Rendering intent: Perceptual
+  Gamma: 0.454545
+  Chromaticity:
+    red primary: (0.64,0.33)
+    green primary: (0.3,0.6)
+    blue primary: (0.15,0.06)
+    white point: (0.3127,0.329)
+  Background color: white
+  Border color: srgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Interlace: None
+  Intensity: Undefined
+  Compose: Over
+  Page geometry: 512x512+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: Zip
+  Orientation: Undefined
+  Properties:
+    date:create: 1970-01-01T00:00:00+00:00
+    date:modify: 2017-06-29T17:12:56+00:00
+    png:IHDR.bit-depth-orig: 8
+    png:IHDR.bit_depth: 8
+    png:IHDR.color-type-orig: 2
+    png:IHDR.color_type: 2 (Truecolor)
+    png:IHDR.interlace_method: 0 (Not interlaced)
+    png:IHDR.width,height: 512, 512
+    png:pHYs: x_res=2835, y_res=2835, units=1
+    png:sRGB: intent=0 (Perceptual Intent)
+    signature: 3f5f430733e05eae8d646178390200281692a95f786e9d8e1adc29e0ff4f5d51
+  Artifacts:
+    filename: /home/ubuntu/s3/2fycrku4FjW/curvature/point_0_view_0_domain_curvature.png
+    verbose: true
+  Tainted: False
+  Filesize: 231KB
+  Number pixels: 262K
+  Pixels per second: 8.738MB
+  User time: 0.000u
+  Elapsed time: 0:01.030
+  Version: ImageMagick 6.8.9-9 Q16 x86_64 2017-05-26 http://www.imagemagick.org

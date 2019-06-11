@@ -1,0 +1,55 @@
+Image: /home/ubuntu/s3/2fycrku4FjW/edge/point_0_view_0_domain_edge.png
+  Format: PNG (Portable Network Graphics)
+  Mime type: image/png
+  Class: DirectClass
+  Geometry: 512x512+0+0
+  Units: Undefined
+  Type: Grayscale
+  Endianess: Undefined
+  Colorspace: Gray
+  Depth: 16-bit
+  Channel depth:
+    gray: 16-bit
+  Channel statistics:
+    Pixels: 262144
+    Gray:
+      min: 0 (0)
+      max: 3266 (0.049836)
+      mean: 43.1052 (0.000657743)
+      standard deviation: 186.853 (0.00285119)
+      kurtosis: 101.687
+      skewness: 9.35872
+  Rendering intent: Undefined
+  Gamma: 1
+  Background color: gray(255)
+  Border color: gray(223)
+  Matte color: gray(189)
+  Transparent color: gray(0)
+  Interlace: None
+  Intensity: Rec709Luminance
+  Compose: Over
+  Page geometry: 512x512+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: Zip
+  Orientation: Undefined
+  Properties:
+    date:create: 1970-01-01T00:00:00+00:00
+    date:modify: 2017-06-29T17:13:00+00:00
+    png:IHDR.bit-depth-orig: 16
+    png:IHDR.bit_depth: 16
+    png:IHDR.color-type-orig: 0
+    png:IHDR.color_type: 0 (Grayscale)
+    png:IHDR.interlace_method: 0 (Not interlaced)
+    png:IHDR.width,height: 512, 512
+    signature: 3212bff91a6d88ec9334d610952f1f3771582b1ed7d50dc063a4798b61c4607b
+  Artifacts:
+    filename: /home/ubuntu/s3/2fycrku4FjW/edge/point_0_view_0_domain_edge.png
+    verbose: true
+  Tainted: False
+  Filesize: 124KB
+  Number pixels: 262K
+  Pixels per second: 6.554MB
+  User time: 0.000u
+  Elapsed time: 0:01.040
+  Version: ImageMagick 6.8.9-9 Q16 x86_64 2017-05-26 http://www.imagemagick.org
