@@ -38,7 +38,7 @@ Table of contents
 
 
 These models are based on task specific networks of the [Taskonomy](http://taskonomy.vision/) project.
-For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository focuses on provding an easy to use unified bank for the pretrained vision tasks. There are 21 tasks accepting one image as input (e.g. surface normal estimation) and 4 tasks accepting multiple image (e.g. relative camera pose estimation). See [detailed definition of each task here](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf).
+For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](http://taskonomy.vision/). This repository focuses on providing an easy to use unified bank for the pretrained vision tasks. There are 21 tasks accepting one image as input (e.g. surface normal estimation) and 4 tasks accepting multiple image (e.g. relative camera pose estimation). See [detailed definition of each task here](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf).
 
 The single-image tasks:
 
