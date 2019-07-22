@@ -18,6 +18,14 @@ Amir Zamir, Alexander Sax*, William Shen*, Leonidas Guibas, Jitendra Malik, Silv
 | The `taskbank` folder contains information about our pretrained models, and scripts to download them. There are sample outputs, and links to live demos. | The `data` folder contains information and statistics about the dataset, some sample data, and instructions for how to download the full dataset. |
 | [![models](taskbank/assets/web_assets/taskbank_tile_GIF_crop.gif)](https://github.com/StanfordVL/taskonomy/tree/master/taskbank) | [![cauthron](data/assets/cauthron_small.png)](https://github.com/StanfordVL/taskonomy/tree/master/data) |
 
+| [Task affinity analyses and results](https://github.com/StanfordVL/taskonomy/tree/master/results)| [Website](http://taskonomy.vision/) |
+|:----|:----|
+| This folder contains the raw and normalized data used for measuring task affinities. | The webpage of the project with links to assets and demos. |
+|[![task affinity analyses and results](data/assets/affinity.jpg)](https://github.com/StanfordVL/taskonomy/tree/master/results) | [![Website front page](data/assets/web_frontpage_small.png)](http://taskonomy.vision/)|
+
+
+ 
+ 
 
 
 ## Citation
