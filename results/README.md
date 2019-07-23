@@ -8,14 +8,17 @@ Hierarchy Process (AHP)" of the [paper](http://taskonomy.stanford.edu/#paper).
 <div align="center">
   <img src="https://github.com/StanfordVL/taskonomy/raw/master/data/assets/affinity_pre_post_AHP.jpg"  width="900px" />
 </div>
+
 **First-order task affinity matrix before (left) and after (right)
 Analytic Hierarchy Process (AHP) normalization.** Lower means better
 transferred. (figure 7 of the [paper](http://taskonomy.stanford.edu/#paper) )
 
 
+
 <div align="center">
   <img src="https://github.com/StanfordVL/taskonomy/raw/master/data/assets/task_tree.jpg"  width="600px" />
 </div>
+
 **Task Similarity Tree.** Agglomerative clustering of tasks
 based on their transferring-out patterns (i.e. using columns of normalized
 affinity matrix as task features). 3D, 2D, low dimensional geometric, and
