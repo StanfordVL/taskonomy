@@ -133,15 +133,15 @@ segment_unsup25d/
     Pixel-level unsupervised superpixel annotations based on RGB + Normals + Depth + Curvature.
 ```
 ## Dataset Splits
-We provide standard train/validation/test splits for the dataset to standardize future benchmarkings. The split files can be accessed [here](https://github.com/StanfordVL/taskonomy/raw/master/data/assets/splits_taskonomy.zip). Given the large size of the full dataset, we provide the standard splits for 4 partitions (`Tiny`, `Medium`, `Full`, `Full+`) with increasing sizes (see below) which the users can employ based on their storage and computation resources. `Full+` is inclusive of `Full`, `Full` is inclusive of `Medium`, and `Medium` is inclusive of `Tiny`.
+We provide standard train/validation/test splits for the dataset to standardize future benchmarkings. The split files can be accessed [here](https://github.com/StanfordVL/taskonomy/raw/master/data/assets/splits_taskonomy.zip). Given the large size of the full dataset, we provide the standard splits for 4 partitions (`Tiny`, `Medium`, `Full`, `Full+`) with increasing sizes (see below) which the users can employ based on their storage and computation resources. `Full+` is inclusive of `Full`, `Full` is inclusive of `Medium`, and `Medium` is inclusive of `Tiny`. The table below shows the number of buildings in each partition.
 
 
-| Split Name   |      Train     |  Val  |  Test |
-|----------|:-------------:|-------------:|------:| 
-| Tiny |  25 | 5 | 5 | 
-| Medium |  100 |  20 | 20 | 
-| Full | 360 | 70 | 70 | 
-| Full+ | 412 |  80 | 80 | 
+| Split Name   |      Train     |  Val  |  Test |  Total |
+|----------|:-------------:|-------------:|------:|------:|  
+| Tiny |  25 | 5 | 5 | 35 | 
+| Medium |  98 |  20 | 20 | 138 |  
+| Full | 344 | 67 | 71 | 482 | 
+| Full+ | 381 |  75 | 81 | 537 |  
 
 
 ## Citation
