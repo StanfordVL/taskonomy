@@ -126,7 +126,7 @@ rgb/
 rgb_large/
     RGB images in 1024x1024 resolution.
 segment_semantic/
-    Semantic segmentation annotations distilled from [FCIS](https://arxiv.org/pdf/1611.07709.pdf)
+    Semantic segmentation annotations distilled from [FCIS](https://arxiv.org/pdf/1611.07709.pdf). The class "0" marks "uncertain" pixels, so they should be masked out in learning.
 segment_unsup2d/
    Pixel-level unsupervised superpixel annotations based on RGB.
 segment_unsup25d/
