@@ -7,22 +7,19 @@
 
 This repository shares a unified bank of pretrained models for **25 vision tasks spanning a wide range of 2D, 3D, and semantic problems**. Given a query image, the produced 25 estimations give a broad visual understanding useful for different purposes. The networks can be used individually as well. We share pretrained networks, easy to use code for running them on arbitrary images, and code for visualizing results similar to the ones shown below. The following figure shows the outputs for a sample query (top left). You can watch a video of the networks applied frame-by-frame on a [YouTube video here](https://youtu.be/SUq1CiX-KzM?t=1m52s).
 
-### See sample results of the TASK BANK here: https://taskonomy.vision/#models
-### Try the live demo here: https://taskonomy.vision/tasks
+**See sample results [here](https://taskonomy.vision/#models). Live demo: [here](https://taskonomy.vision/tasks). Project website: https://taskonomy.vision**
+
+| UPDATE (2019): Pretrained models now also available in PyTorch [HERE](https://github.com/alexsax/midlevel-reps/blob/master/README.md#installing-visualpriors).|
+|------------------------------------------------------------------------|
+
 #### Reference Paper: "Taskonomy: Disentangling Task Transfer Learning", CVPR 2018. [Best Paper award]
 Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
-
-http://taskonomy.vision/ 
-
-<div align="center">
-  <img src="assets/web_assets/task_dict_v.jpg" />
-</div>
 
 
 Table of contents
 =================
 
-   * [Introduction](#Introduction)
+   * [Introduction](#introduction)
    * [Installation](#installation)
    * [Running Single-Image Tasks](#running-single-image-tasks)
         * [Storing Representations](#storing-representations)
@@ -32,6 +29,9 @@ Table of contents
    * [Citing](#citing)
 
 
+<div align="center">
+  <img src="assets/web_assets/task_dict_v.jpg" />
+</div>
 
 
 ## Introduction
@@ -77,6 +77,11 @@ Since the tasks in our dictionary can have different dimensionalities in their o
 
 
 ## Installation
+
+| UPDATE (2019): Pretrained models now also available in PyTorch [HERE](https://github.com/alexsax/midlevel-reps/blob/master/README.md#installing-visualpriors).|
+|------------------------------------------------------------------------|
+
+Keep reading below for instructions on how to use TensorFlow to get the taskbank networks up and running.
 
 ### Step 1: Clone the Code from Github
 
