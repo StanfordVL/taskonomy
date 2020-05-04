@@ -7,10 +7,11 @@
 
 This repository shares a unified bank of pretrained models for **25 vision tasks spanning a wide range of 2D, 3D, and semantic problems**. Given a query image, the produced 25 estimations give a broad visual understanding useful for different purposes. The networks can be used individually as well. We share pretrained networks, easy to use code for running them on arbitrary images, and code for visualizing results similar to the ones shown below. The following figure shows the outputs for a sample query (top left). You can watch a video of the networks applied frame-by-frame on a [YouTube video here](https://youtu.be/SUq1CiX-KzM?t=1m52s).
 
-**See sample results [here](https://taskonomy.vision/#models). Live demo: [here](https://taskonomy.vision/tasks). Project website: https://taskonomy.vision**
 
 | UPDATE (2019): Pretrained models now also available in PyTorch [HERE](https://github.com/alexsax/midlevel-reps/blob/master/README.md#installing-visualpriors).|
 |------------------------------------------------------------------------|
+
+**See sample results [here](https://taskonomy.vision/#models). Live demo: [here](https://taskonomy.vision/tasks). Project website: https://taskonomy.vision**
 
 #### Reference Paper: "Taskonomy: Disentangling Task Transfer Learning", CVPR 2018. [Best Paper award]
 Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
