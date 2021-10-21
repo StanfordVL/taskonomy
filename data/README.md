@@ -17,7 +17,14 @@ Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik
 The dataset includes over 4.5 million images from over 500 buildings. **Each image has annotations for every one of the 2D, 3D, and semantic tasks in Taskonomy's dictionary** (see below). The total size of the dataset is 11.16 TB. For more details, please see the [CVPR 2018 paper](http://taskonomy.vision/#paper).
 
 ## Downloading the Dataset [NEW OCT 2021]
-To download the full dataset, please use the [Omnidata download tool](https://docs.omnidata.vision/starter_dataset_download.html#Examples)
+To download the full dataset, please use the [Omnidata download tool](https://docs.omnidata.vision/starter_dataset_download.html) (Eftekhar et al 2021). Note that the Taskonomy dataset is a subset of the larger Omnidata 'starter dataset' (14M images). To download _only_ the Taskonomy component, you can use:
+```
+sudo apt-get install aria2
+pip install omnidata-tools
+omnitools.download all --components taskonomy --subset fullplus \
+  --dest ./taskonomy_dataset/ \
+  --connections_total 40 --agree
+```
 
 Below you can browse the data from a single sample building (out of >500 buildings in the full dataset).
 
