@@ -16,8 +16,10 @@ Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik
 
 The dataset includes over 4.5 million images from over 500 buildings. **Each image has annotations for every one of the 2D, 3D, and semantic tasks in Taskonomy's dictionary** (see below). The total size of the dataset is 11.16 TB. For more details, please see the [CVPR 2018 paper](http://taskonomy.vision/#paper).
 
-#### Downloading the Dataset
-For accessing the full dataset and terms of use, please email the authors to receive the download links. Below you can browse a fraction of data (a single building out of >500 buildings) as a sample.  
+## Downloading the Dataset [NEW OCT 2021]
+To download the full dataset, please use the [Omnidata download tool](https://docs.omnidata.vision/starter_dataset_download.html#Examples)
+
+Below you can browse the data from a single sample building (out of >500 buildings in the full dataset).
 
 #### Sample building
 | [See sample building](https://github.com/alexsax/taskonomy-sample-model-1) (```Cauthron```) | [Website](http://taskonomy.vision/) |
@@ -28,7 +30,7 @@ For accessing the full dataset and terms of use, please email the authors to rec
 
 ## Contents 
 - [Intro](#intro)
-- [Downloading the Dataset](#downloading-the-dataset)
+- [Downloading the Dataset](#downloading-the-dataset-new-oct-2021)
 - [sample building](#sample-building)
 - [Data Statistics](#data-statistics)
   - Image-level statistics
