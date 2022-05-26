@@ -42,7 +42,7 @@ scipy==1.0.0
 semantic-version==2.5.0
 six==1.11.0
 tabulate==0.7.5
-tensorflow==1.5.0
+tensorflow==2.7.2
 tensorflow-tensorboard==1.5.1
 termcolor==1.1.0
 transforms3d==0.3.1
