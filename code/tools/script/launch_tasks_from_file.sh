@@ -58,7 +58,7 @@ USER_DATA=$(base64 $OPTIONS << END_USER_DATA
 export INSTANCE_TAG="${src}__${intermediate}__${dst}__1024";
 # export ACTION=TRANSFER;
 cd /home/ubuntu/task-taxonomy-331b
-git remote add autopull https://alexsax:328d7b8a3e905c1400f293b9c4842fcae3b7dc54@github.com/alexsax/task-taxonomy-331b.git
+git remote add autopull https://github.com/alexsax/task-taxonomy-331b.git
 git pull autopull perceptual-transfer
 
 

@@ -52,7 +52,7 @@ export ACTION=IMAGENET_KDISTILL;
 
 cd /home/ubuntu/task-taxonomy-331b
 git stash
-git remote add autopull https://alexsax:328d7b8a3e905c1400f293b9c4842fcae3b7dc54@github.com/alexsax/task-taxonomy-331b.git
+git remote add autopull https://github.com/alexsax/task-taxonomy-331b.git
 git pull autopull perceptual-transfer
 git pull autopull perceptual-transfer
 

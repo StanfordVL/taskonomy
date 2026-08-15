@@ -50,7 +50,7 @@ USER_DATA=$(base64 $OPTIONS << END_USER_DATA
 export INSTANCE_TAG="${task} --data-split test";
 export ACTION=SHUTDOWN;
 cd /home/ubuntu/task-taxonomy-331b
-git remote add autopull https://alexsax:328d7b8a3e905c1400f293b9c4842fcae3b7dc54@github.com/alexsax/task-taxonomy-331b.git
+git remote add autopull https://github.com/alexsax/task-taxonomy-331b.git
 git pull autopull perceptual-transfer
 python /home/ubuntu/task-taxonomy-331b/tools/extract_losses.py --cfg_dir /home/ubuntu/task-taxonomy-331b/experiments/aws_second/ --task $task --data-split test
 END_USER_DATA
