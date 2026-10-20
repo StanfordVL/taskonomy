@@ -8,7 +8,7 @@ This repository contains:
 
 for the the following paper:
 
-#### [Taskonomy: Disentangling Task Transfer Learning](http://taskonomy.stanford.edu/) (CVPR 2018, Best Paper Award)
+#### [Taskonomy: Disentangling Task Transfer Learning](https://arxiv.org/abs/1804.08328) (CVPR 2018, Best Paper Award)
 Amir Zamir, Alexander Sax*, William Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
 
 
