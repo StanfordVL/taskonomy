@@ -38,7 +38,7 @@ tools/      # Utilities
 6) Generate win rates and affinities with one of the methods in `analysis/`
 
 
-**Note**: this folder provides the full code and additional resources for archival and information purposes only. We dont maintain the code here. For trained TASK BANK networks and demo code for running them, please see the [TASK BANK folder](https://github.com/StanfordVL/taskonomy/tree/master/taskbank). For Taskonomy dataset, please see the [DATASET folder](https://github.com/StanfordVL/taskonomy/tree/master/data). For more details and the full methodology, please see the [main paper and website](http://taskonomy.vision).
+**Note**: this folder provides the full code and additional resources for archival and information purposes only. We dont maintain the code here. For trained TASK BANK networks and demo code for running them, please see the [TASK BANK folder](https://github.com/StanfordVL/taskonomy/tree/master/taskbank). For Taskonomy dataset, please see the [DATASET folder](https://github.com/StanfordVL/taskonomy/tree/master/data). For more details and the full methodology, please see the [main paper and website](http://taskonomy.stanford.edu).
 
 ## Citation
 If you find the code, models, or data useful, please cite this paper:
