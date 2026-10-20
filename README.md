@@ -1,4 +1,4 @@
-# [Taskonomy: Disentangling Task Transfer Learning](http://taskonomy.stanford.edu/)
+# [Taskonomy: Disentangling Task Transfer Learning](https://arxiv.org/abs/1804.08328)
 
 This repository contains:
 - [pretrained models (task bank)](https://github.com/StanfordVL/taskonomy/tree/master/taskbank) [PyTorch + TensorFlow].
