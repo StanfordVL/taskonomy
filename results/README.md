@@ -1,4 +1,4 @@
-# [Taskonomy: Disentangling Task Transfer Learning](http://taskonomy.stanford.edu/)
+# [Taskonomy: Disentangling Task Transfer Learning](https://arxiv.org/abs/1804.08328)
 
 This folder contains the **raw and post-processed measurements of task affinities**, under various configurations (e.g. 1k/16k/etc images used for training transfer functions and measuring task affinities). The **win-rates** are included as well. 
 
