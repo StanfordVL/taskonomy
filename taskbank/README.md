@@ -39,7 +39,7 @@ Table of contents
 
 
 These models are based on task specific networks of the [Taskonomy](http://taskonomy.stanford.edu/) project.
-For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](http://taskonomy.stanford.edu/). This repository focuses on providing an easy to use unified bank for the pretrained vision tasks. There are 21 tasks accepting one image as input (e.g. surface normal estimation) and 4 tasks accepting multiple image (e.g. relative camera pose estimation). See [detailed definition of each task here](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf).
+For more extensive discussions about Taskonomy and transfer learning, please see the [CVPR 2018 paper](https://arxiv.org/abs/1804.08328). This repository focuses on providing an easy to use unified bank for the pretrained vision tasks. There are 21 tasks accepting one image as input (e.g. surface normal estimation) and 4 tasks accepting multiple image (e.g. relative camera pose estimation). See [detailed definition of each task here](https://github.com/StanfordVL/taskonomy/blob/master/taskbank/assets/web_assets/task_definitions.pdf).
 
 The single-image tasks:
 
@@ -235,7 +235,7 @@ python tools/run_multi_img_task.py --task point_match --img assets/test_1.png,as
 ```
 
 ## Evaluation: How good are these networks?
-For a complete discussion on the evaluation of the networks, please see the [paper](http://taskonomy.stanford.edu/). Overall, the shared networks are often on par or better than per-task customized state-of-the-art. For instnace, we compared our depth estimator network vs. the released models of [Laina2016](https://github.com/iro-cp/FCRN-DepthPrediction) (as of now state-of-the-art on NYU dataset) resulting in 88% `win-rate` for task bank's network on a hold-out test set (after all proper normalizations and whitenings to count for dataset distribution changes across datasets; supported by qualitative results). 
+For a complete discussion on the evaluation of the networks, please see the [paper](https://arxiv.org/abs/1804.08328). Overall, the shared networks are often on par or better than per-task customized state-of-the-art. For instnace, we compared our depth estimator network vs. the released models of [Laina2016](https://github.com/iro-cp/FCRN-DepthPrediction) (as of now state-of-the-art on NYU dataset) resulting in 88% `win-rate` for task bank's network on a hold-out test set (after all proper normalizations and whitenings to count for dataset distribution changes across datasets; supported by qualitative results). 
 
 To give an overall idea about the quality of the bank, the table below shows the proportion (%) of a hold-out test set on which the networks in the task bank were able to beat average estimator (`avg`), i.e. the best statistically informed guess, and a network trained on random nonlinear projections (Gaussian representation - `rand`). The numbers denote the good quality of the networks, statistically. Qualititave results run frame-by-frame on a YouTube video can be examined [here](http://taskonomy.stanford.edu/#models).  
 
