@@ -1,7 +1,7 @@
 # TASKONOMY Dataset 
 
 <div align="center">
-  <img src="http://taskonomy.vision/static/images/dataset_thumbnail.png"  width="900px" />
+  <img src="http://taskonomy.stanford.edu/static/images/dataset_thumbnail.png"  width="900px" />
 </div>
 
 **Annotations of a sample image.** Labels are shown for a subset of 15 tasks.
@@ -14,7 +14,7 @@ This repository shares a multi-annotated dataset from the following paper:
 **Taskonomy: Disentangling Task Transfer Learning**, CVPR 2018.
 Amir R. Zamir, Alexander Sax*, William B. Shen*, Leonidas Guibas, Jitendra Malik, Silvio Savarese. 
 
-The dataset includes over 4.5 million images from over 500 buildings. **Each image has annotations for every one of the 2D, 3D, and semantic tasks in Taskonomy's dictionary** (see below). The total size of the dataset is 11.16 TB. For more details, please see the [CVPR 2018 paper](http://taskonomy.vision/#paper).
+The dataset includes over 4.5 million images from over 500 buildings. **Each image has annotations for every one of the 2D, 3D, and semantic tasks in Taskonomy's dictionary** (see below). The total size of the dataset is 11.16 TB. For more details, please see the [CVPR 2018 paper](http://taskonomy.stanford.edu/#paper).
 
 ## Downloading the Dataset [NEW OCT 2021]
 To download the full dataset, please use the [Omnidata download tool](https://docs.omnidata.vision/starter_dataset_download.html) (Eftekhar et al 2021).
@@ -31,9 +31,9 @@ omnitools.download all --components taskonomy --subset fullplus \
 Below you can browse the data from a single sample building (out of >500 buildings in the full dataset).
 
 #### Sample building
-| [See sample building](https://github.com/alexsax/taskonomy-sample-model-1) (```Cauthron```) | [Website](http://taskonomy.vision/) |
+| [See sample building](https://github.com/alexsax/taskonomy-sample-model-1) (```Cauthron```) | [Website](http://taskonomy.stanford.edu/) |
 |:----:|:----:|
-|[![Sample building](assets/cauthron_small.png)](https://github.com/alexsax/taskonomy-sample-model-1) | [![Website front page](assets/web_frontpage_small.png)](http://taskonomy.vision/)|
+|[![Sample building](assets/cauthron_small.png)](https://github.com/alexsax/taskonomy-sample-model-1) | [![Website front page](assets/web_frontpage_small.png)](http://taskonomy.stanford.edu/)|
 
 
 
