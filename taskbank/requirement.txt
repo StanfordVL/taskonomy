@@ -33,7 +33,7 @@ protobuf==3.4.0
 pyparsing==2.2.0
 python-dateutil==2.6.1
 pytz==2018.3
-PyYAML==3.12
+PyYAML==5.4
 requests==2.9.1
 s3transfer==0.1.11
 scikit-image==0.12.3
